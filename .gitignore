@@ -1,0 +1,10 @@
+node_modules/
+out/
+dist/
+*.log
+.DS_Store
+
+# Fetched by scripts/fetch-assets.mjs (npm install)
+resources/bin/
+resources/models/DeepFilterNet3_onnx.tar.gz
+resources/models/silero_vad.onnx

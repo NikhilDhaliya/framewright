@@ -1,0 +1,232 @@
+.pp-preview {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--pp-bg-surface);
+}
+.pp-preview-tabs { gap: 4px; padding: 0 6px; }
+
+/* ---------- Canvas ---------- */
+.pp-canvas-area {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--pp-bg-surface);
+}
+.pp-canvas-box { position: absolute; }
+.pp-canvas-box.outlined { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25); }
+.pp-engine-surface,
+.pp-canvas-hit {
+  position: absolute;
+  inset: 0;
+}
+.pp-engine-canvas { display: block; }
+.pp-guides { position: absolute; left: 0; top: 0; pointer-events: none; }
+.pp-source-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.pp-source-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.pp-engine-error {
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+  color: var(--pp-text-secondary);
+  font-size: var(--pp-fs-sm);
+}
+.pp-engine-error svg { color: var(--pp-overlay-error); }
+.pp-engine-error .title { font-size: 15px; font-weight: 600; color: #fff; }
+.pp-engine-error .detail { max-width: 420px; color: rgba(255, 255, 255, 0.8); }
+.pp-offline {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+.pp-offline button { pointer-events: auto; }
+.pp-offline-icon { color: var(--pp-overlay-error); flex-shrink: 0; }
+.pp-offline-title { font-size: 15px; font-weight: 600; color: #fff; }
+.pp-offline-detail { max-width: 420px; font-size: var(--pp-fs-sm); color: rgba(255, 255, 255, 0.8); }
+.pp-offline-path { max-width: 100%; font-size: var(--pp-fs-sm); color: rgba(255, 255, 255, 0.6); user-select: text; pointer-events: auto; }
+.pp-source-unsupported {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--pp-fs-sm);
+  color: var(--pp-text-tertiary);
+}
+
+/* ---------- Transform gizmo ---------- */
+.pp-xf {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+.pp-xf-hit {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: move;
+}
+.pp-xf-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  pointer-events: auto;
+}
+.pp-center-guide {
+  position: absolute;
+  background: color-mix(in srgb, var(--pp-timecode) 80%, transparent);
+  pointer-events: none;
+}
+.pp-center-guide.v { top: 0; bottom: 0; width: 1px; }
+.pp-center-guide.h { left: 0; right: 0; height: 1px; }
+
+/* ---------- Crop ---------- */
+.pp-crop { position: absolute; }
+.pp-crop-dim { position: absolute; background: rgba(0, 0, 0, 0.55); pointer-events: none; }
+.pp-crop-window {
+  position: absolute;
+  outline: 1.5px solid var(--pp-timecode);
+  cursor: grab;
+}
+.pp-crop-window:active { cursor: grabbing; }
+.pp-crop-third { position: absolute; background: color-mix(in srgb, var(--pp-timecode) 35%, transparent); pointer-events: none; }
+.pp-crop-third.v { top: 0; bottom: 0; width: 1px; }
+.pp-crop-third.h { left: 0; right: 0; height: 1px; }
+.pp-crop-handle { position: absolute; width: 8px; height: 8px; background: var(--pp-timecode); }
+
+/* ---------- Scrub & transport ---------- */
+.pp-scrubbar {
+  position: relative;
+  height: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.pp-scrubbar-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: var(--pp-fill-soft);
+  overflow: hidden;
+  transition: height var(--pp-anim-hover) ease-out;
+}
+.pp-scrubbar:hover .pp-scrubbar-track,
+.pp-scrubbar.active .pp-scrubbar-track { height: 4px; }
+.pp-scrubbar-fill { height: 100%; background: var(--pp-accent); border-radius: 999px; }
+.pp-scrubbar-thumb {
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pp-text-primary);
+  box-shadow: var(--pp-shadow-sm);
+  transform: translate(-50%, -50%);
+  transition: width var(--pp-anim-hover) ease-out, height var(--pp-anim-hover) ease-out;
+}
+.pp-scrubbar:hover .pp-scrubbar-thumb,
+.pp-scrubbar.active .pp-scrubbar-thumb { width: 10px; height: 10px; }
+
+.pp-transport {
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+  container-type: inline-size;
+}
+.pp-timecode { font-size: var(--pp-fs-sm); white-space: nowrap; }
+.pp-timecode .cur { color: var(--pp-timecode); }
+.pp-timecode .sep { color: var(--pp-text-tertiary); }
+.pp-timecode .tot { color: var(--pp-text-secondary); }
+.pp-transport-buttons { display: flex; align-items: center; gap: 10px; }
+.pp-transport-accessories { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+/* ViewThatFits (§5.5): tighten the transport, then drop the duration, before anything clips. */
+@container (max-width: 460px) {
+  .pp-transport-buttons { gap: 4px; }
+}
+@container (max-width: 430px) {
+  .pp-timecode .sep,
+  .pp-timecode .tot { display: none; }
+}
+.pp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding: 0 6px;
+  font-size: var(--pp-fs-xxs);
+  font-weight: 700;
+  color: var(--pp-text-secondary);
+}
+
+/* Slip two-up (§5.9) */
+.pp-slip-twoup {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 2px;
+  background: #000;
+  pointer-events: none;
+  z-index: 5;
+}
+.pp-slip-pane {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  background: #000;
+  overflow: hidden;
+}
+.pp-slip-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pp-slip-label {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 10px;
+  line-height: 13px;
+  white-space: nowrap;
+}
+.pp-slip-label .name { font-weight: 600; color: #fff; }
+.pp-slip-label .tc { color: rgba(255, 255, 255, 0.8); font-variant-numeric: tabular-nums; }

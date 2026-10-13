@@ -1,0 +1,2632 @@
+{
+ "$comment": "Proposed Linux generation catalog for Palmier Pro (06-agent-and-generation.md §B12.5). Same shape as the Mac models:list CatalogEntry (Generation/Catalog/ModelCatalog.swift) plus Linux-only byok routes and aliases. Capabilities are provider limits as documented on 2026-10-13, not Palmier server values.",
+ "catalogVersion": 4,
+ "linuxRevision": 1,
+ "models": [
+  {
+   "id": "minimax-h3",
+   "kind": "video",
+   "displayName": "MiniMax H3",
+   "providerIconKey": "minimax",
+   "providerName": "MiniMax",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 9,
+    "maxReferenceVideos": 3,
+    "maxReferenceAudios": 3,
+    "maxTotalReferences": 12,
+    "maxCombinedVideoRefSeconds": 15,
+    "maxCombinedAudioRefSeconds": 15,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "minimax/h3/text-to-video",
+       "i2v": "minimax/h3/image-to-video",
+       "flf": "minimax/h3/image-to-video",
+       "ref": "minimax/h3/reference-to-video"
+      }
+     },
+     {
+      "provider": "minimax",
+      "protocol": "minimax",
+      "endpoints": {
+       "t2v": "MiniMax-H3",
+       "i2v": "MiniMax-H3",
+       "flf": "MiniMax-H3",
+       "ref": "MiniMax-H3"
+      }
+     },
+     {
+      "provider": "replicate",
+      "protocol": "replicate",
+      "endpoints": {
+       "t2v": "minimax/h3",
+       "i2v": "minimax/h3",
+       "flf": "minimax/h3",
+       "ref": "minimax/h3"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "hailuo-03-max",
+   "kind": "video",
+   "displayName": "MiniMax H3 Max",
+   "providerIconKey": "minimax",
+   "providerName": "MiniMax",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "768P",
+     "1080P",
+     "480P"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 9,
+    "maxReferenceVideos": 3,
+    "maxReferenceAudios": 3,
+    "maxTotalReferences": 12,
+    "maxCombinedVideoRefSeconds": 15,
+    "maxCombinedAudioRefSeconds": 15,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "minimax/h3-max/text-to-video",
+       "i2v": "minimax/h3-max/image-to-video",
+       "flf": "minimax/h3-max/image-to-video",
+       "ref": "minimax/h3-max/reference-to-video"
+      }
+     },
+     {
+      "provider": "minimax",
+      "protocol": "minimax",
+      "endpoints": {
+       "t2v": "MiniMax-H3-Max",
+       "i2v": "MiniMax-H3-Max",
+       "flf": "MiniMax-H3-Max",
+       "ref": "MiniMax-H3-Max"
+      }
+     }
+    ]
+   },
+   "aliases": [
+    "hailuo-03"
+   ]
+  },
+  {
+   "id": "seedance-2.0",
+   "kind": "video",
+   "displayName": "Seedance 2",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "480p",
+     "4k"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 9,
+    "maxReferenceVideos": 3,
+    "maxReferenceAudios": 3,
+    "maxTotalReferences": 12,
+    "maxCombinedVideoRefSeconds": 15,
+    "maxCombinedAudioRefSeconds": 15,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "bytedance/seedance-2.0/text-to-video",
+       "i2v": "bytedance/seedance-2.0/image-to-video",
+       "flf": "bytedance/seedance-2.0/image-to-video",
+       "ref": "bytedance/seedance-2.0/reference-to-video"
+      }
+     },
+     {
+      "provider": "byteplus",
+      "protocol": "byteplus-task",
+      "endpoints": {
+       "t2v": "dreamina-seedance-2-0-260128",
+       "i2v": "dreamina-seedance-2-0-260128",
+       "flf": "dreamina-seedance-2-0-260128",
+       "ref": "dreamina-seedance-2-0-260128"
+      }
+     },
+     {
+      "provider": "replicate",
+      "protocol": "replicate",
+      "endpoints": {
+       "t2v": "bytedance/seedance-2.0",
+       "i2v": "bytedance/seedance-2.0",
+       "flf": "bytedance/seedance-2.0",
+       "ref": "bytedance/seedance-2.0"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {},
+   "aliases": [
+    "seedance-2"
+   ]
+  },
+  {
+   "id": "seedance-2-fast",
+   "kind": "video",
+   "displayName": "Seedance 2 Fast",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 9,
+    "maxReferenceVideos": 3,
+    "maxReferenceAudios": 3,
+    "maxTotalReferences": 12,
+    "maxCombinedVideoRefSeconds": 15,
+    "maxCombinedAudioRefSeconds": 15,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "bytedance/seedance-2.0/fast/text-to-video",
+       "i2v": "bytedance/seedance-2.0/fast/image-to-video",
+       "flf": "bytedance/seedance-2.0/fast/image-to-video",
+       "ref": "bytedance/seedance-2.0/fast/reference-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "seedance-2-mini",
+   "kind": "video",
+   "displayName": "Seedance 2 Mini",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 9,
+    "maxReferenceVideos": 3,
+    "maxReferenceAudios": 3,
+    "maxTotalReferences": 12,
+    "maxCombinedVideoRefSeconds": 15,
+    "maxCombinedAudioRefSeconds": 15,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "bytedance/seedance-2.0/mini/text-to-video",
+       "i2v": "bytedance/seedance-2.0/mini/image-to-video",
+       "flf": "bytedance/seedance-2.0/mini/image-to-video",
+       "ref": "bytedance/seedance-2.0/mini/reference-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "seedance-2.5",
+   "kind": "video",
+   "displayName": "Seedance 2.5",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     4,
+     5,
+     6,
+     8,
+     10,
+     12,
+     15,
+     20,
+     25,
+     30
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "480p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 30,
+    "maxReferenceVideos": 10,
+    "maxReferenceAudios": 10,
+    "maxTotalReferences": 50,
+    "maxCombinedVideoRefSeconds": 30,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false,
+    "draftCreditsPerSecond": 0,
+    "draftEnhanceCreditsPerSecond": 0
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "bytedance/seedance-2.5/text-to-video",
+       "i2v": "bytedance/seedance-2.5/image-to-video",
+       "flf": "bytedance/seedance-2.5/image-to-video",
+       "ref": "bytedance/seedance-2.5/reference-to-video",
+       "enhance": "bytedance/seedance-2.5/draft/complete"
+      }
+     },
+     {
+      "provider": "byteplus",
+      "protocol": "byteplus-task",
+      "endpoints": {
+       "t2v": "dreamina-seedance-2-5-260628",
+       "i2v": "dreamina-seedance-2-5-260628",
+       "flf": "dreamina-seedance-2-5-260628",
+       "ref": "dreamina-seedance-2-5-260628"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "grok-imagine-video",
+   "kind": "video",
+   "displayName": "Grok Imagine Video",
+   "providerIconKey": "xai",
+   "providerName": "xAI",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "720p",
+     "480p",
+     "1080p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "21:9"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 7,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "xai",
+      "protocol": "xai",
+      "endpoints": {
+       "t2v": "grok-imagine-video-1.5",
+       "i2v": "grok-imagine-video-1.5",
+       "flf": "grok-imagine-video-1.5",
+       "ref": "grok-imagine-video-1.5"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "xai/grok-imagine-video/v1.5/text-to-video",
+       "i2v": "xai/grok-imagine-video/v1.5/image-to-video",
+       "ref": "xai/grok-imagine-video/v1.5/reference-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "flux-3",
+   "kind": "video",
+   "displayName": "FLUX.3",
+   "providerIconKey": "blackforestlabs",
+   "providerName": "Black Forest Labs",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     5,
+     6,
+     8,
+     10,
+     12,
+     15,
+     20
+    ],
+    "resolutions": [
+     "720p",
+     "1080p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9",
+     "2:1"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 0,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "maxSourceVideoSeconds": 15,
+    "requiredSourceVideoEncoding": "h264-mp4",
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false,
+    "draftCreditsPerSecond": 0,
+    "draftEnhanceCreditsPerSecond": 0,
+    "sourceVideoCreditsPerSecond": {}
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "blackforestlabs/flux-3/text-to-video",
+       "i2v": "blackforestlabs/flux-3/image-to-video",
+       "flf": "blackforestlabs/flux-3/first-last-frame-to-video",
+       "edit": "blackforestlabs/flux-3/extend-video",
+       "draft_suffix": "/draft",
+       "enhance": "blackforestlabs/flux-3/draft-enhance"
+      }
+     },
+     {
+      "provider": "bfl",
+      "protocol": "bfl",
+      "endpoints": {
+       "t2v": "flux-3-video",
+       "i2v": "flux-3-video",
+       "flf": "flux-3-video",
+       "edit": "flux-3-video",
+       "enhance": "flux-3-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "veo3.1-fast",
+   "kind": "video",
+   "displayName": "Veo 3.1 Fast",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     4,
+     6,
+     8
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 3,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": true,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "fal-ai/veo3.1/fast",
+       "i2v": "fal-ai/veo3.1/fast/image-to-video",
+       "flf": "fal-ai/veo3.1/fast/first-last-frame-to-video",
+       "ref": "fal-ai/veo3.1/fast/reference-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "kling-v3",
+   "kind": "video",
+   "displayName": "Kling V3",
+   "providerIconKey": "kling",
+   "providerName": "Kling",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "4k"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 3,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Element",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "fal-ai/kling-video/v3/{tier}/text-to-video",
+       "i2v": "fal-ai/kling-video/v3/{tier}/image-to-video",
+       "flf": "fal-ai/kling-video/v3/{tier}/image-to-video",
+       "ref": "fal-ai/kling-video/v3/{tier}/text-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "kling-o3",
+   "kind": "video",
+   "displayName": "Kling O3",
+   "providerIconKey": "kling",
+   "providerName": "Kling",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "4k"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 7,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "fal-ai/kling-video/o3/{tier}/text-to-video",
+       "i2v": "fal-ai/kling-video/o3/{tier}/image-to-video",
+       "flf": "fal-ai/kling-video/o3/{tier}/image-to-video",
+       "ref": "fal-ai/kling-video/o3/{tier}/reference-to-video"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "ltx-2.5-pro",
+   "kind": "video",
+   "displayName": "LTX 2.5 Pro",
+   "providerIconKey": "ltx",
+   "providerName": "LTX",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     6,
+     8,
+     10
+    ],
+    "resolutions": [
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 0,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "lightricks/ltx-2.5/text-to-video/pro",
+       "i2v": "lightricks/ltx-2.5/image-to-video/pro",
+       "flf": "lightricks/ltx-2.5/image-to-video/pro"
+      }
+     },
+     {
+      "provider": "ltx",
+      "protocol": "generic-json",
+      "endpoints": {
+       "t2v": "ltx-2-5-pro",
+       "i2v": "ltx-2-5-pro",
+       "flf": "ltx-2-5-pro"
+      }
+     }
+    ]
+   },
+   "audioDiscountRate": {}
+  },
+  {
+   "id": "wan-3.0",
+   "kind": "video",
+   "displayName": "Wan 3.0",
+   "providerIconKey": "alibaba",
+   "providerName": "Alibaba",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [
+     5,
+     10,
+     15
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "480p"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "supportsFirstFrame": true,
+    "supportsLastFrame": true,
+    "maxReferenceImages": 10,
+    "maxReferenceVideos": 5,
+    "maxReferenceAudios": 5,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": false,
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2v": "alibaba/wan-3.0/text-to-video",
+       "i2v": "alibaba/wan-3.0/image-to-video",
+       "flf": "alibaba/wan-3.0/image-to-video",
+       "ref": "alibaba/wan-3.0/reference-to-video"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "kling-o3-edit",
+   "kind": "video",
+   "displayName": "Kling O3 Edit",
+   "providerIconKey": "kling",
+   "providerName": "Kling",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [],
+    "aspectRatios": [],
+    "supportsFirstFrame": false,
+    "supportsLastFrame": false,
+    "maxReferenceImages": 4,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": true,
+    "maxSourceVideoSeconds": 15,
+    "requiredSourceVideoEncoding": "h264-mp4",
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "edit": "fal-ai/kling-video/o3/pro/video-to-video/edit"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "runway-aleph-2",
+   "kind": "video",
+   "displayName": "Runway Aleph 2.0",
+   "providerIconKey": "runway",
+   "providerName": "Runway",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [],
+    "aspectRatios": [],
+    "supportsFirstFrame": false,
+    "supportsLastFrame": false,
+    "maxReferenceImages": 0,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": true,
+    "maxSourceVideoSeconds": 30,
+    "requiredSourceVideoEncoding": "h264-mp4",
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "runway",
+      "protocol": "runway",
+      "endpoints": {
+       "edit": "aleph2"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "kling-v3-motion-control",
+   "kind": "video",
+   "displayName": "Kling V3 Motion Control",
+   "providerIconKey": "kling",
+   "providerName": "Kling",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": true,
+    "durations": [],
+    "aspectRatios": [],
+    "supportsFirstFrame": false,
+    "supportsLastFrame": false,
+    "maxReferenceImages": 1,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 0,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": true,
+    "maxSourceVideoSeconds": 30,
+    "requiredSourceVideoEncoding": "h264-mp4",
+    "requiresReferenceImage": true,
+    "requiresReferenceAudio": false
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "edit": "fal-ai/kling-video/v3/pro/motion-control"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "veed-lipsync-v2",
+   "kind": "video",
+   "displayName": "VEED Lip Sync v2",
+   "providerIconKey": "veed",
+   "providerName": "VEED",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "supportsPrompt": false,
+    "durations": [],
+    "aspectRatios": [],
+    "supportsFirstFrame": false,
+    "supportsLastFrame": false,
+    "maxReferenceImages": 0,
+    "maxReferenceVideos": 0,
+    "maxReferenceAudios": 1,
+    "framesAndReferencesExclusive": false,
+    "referenceTagNoun": "Image",
+    "requiresSourceVideo": true,
+    "requiredSourceVideoEncoding": "h264-mp4",
+    "requiresReferenceImage": false,
+    "requiresReferenceAudio": true
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "edit": "veed/lipsync/v2"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "edit": "fal-ai/sync-lipsync/v2"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "gpt-image-2",
+   "kind": "image",
+   "displayName": "GPT Image 2",
+   "providerIconKey": "openai",
+   "providerName": "OpenAI",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1536x1024",
+     "1024x1536",
+     "1024x1024",
+     "2048x1152",
+     "1152x2048",
+     "2048x2048",
+     "3840x2160",
+     "2160x3840"
+    ],
+    "aspectRatios": [],
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "openai",
+      "protocol": "openai-images",
+      "endpoints": {
+       "t2i": "gpt-image-2",
+       "edit": "gpt-image-2"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "openai/gpt-image-2",
+       "edit": "openai/gpt-image-2/edit"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "gpt-image-2.5",
+   "kind": "image",
+   "displayName": "GPT-2.5 Image",
+   "providerIconKey": "openai",
+   "providerName": "OpenAI",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1536x1024",
+     "1024x1536",
+     "1024x1024",
+     "2048x1152",
+     "1152x2048",
+     "2048x2048",
+     "3840x2160",
+     "2160x3840"
+    ],
+    "aspectRatios": [],
+    "qualities": [
+     "low",
+     "medium",
+     "high",
+     "xhigh",
+     "max"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "openai",
+      "protocol": "openai-images",
+      "endpoints": {
+       "t2i": "gpt-image-2.5-flare",
+       "edit": "gpt-image-2.5-sunburst"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "openai/gpt-image-2.5/flare/text-to-image",
+       "edit": "openai/gpt-image-2.5/sunburst/edit"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "nano-banana-pro",
+   "kind": "image",
+   "displayName": "Nano Banana Pro",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "5:4",
+     "4:5",
+     "21:9"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "google",
+      "protocol": "gemini-interactions",
+      "endpoints": {
+       "t2i": "gemini-3-pro-image",
+       "edit": "gemini-3-pro-image"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "fal-ai/nano-banana-pro",
+       "edit": "fal-ai/nano-banana-pro/edit"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "nano-banana-2",
+   "kind": "image",
+   "displayName": "Nano Banana 2",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "5:4",
+     "4:5",
+     "21:9",
+     "1:4",
+     "4:1",
+     "1:8",
+     "8:1"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "google",
+      "protocol": "gemini-interactions",
+      "endpoints": {
+       "t2i": "gemini-3.1-flash-image",
+       "edit": "gemini-3.1-flash-image"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "fal-ai/nano-banana-2",
+       "edit": "fal-ai/nano-banana-2/edit"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "nano-banana-lite",
+   "kind": "image",
+   "displayName": "Nano Banana Lite",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1K"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "5:4",
+     "4:5",
+     "21:9"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "google",
+      "protocol": "gemini-interactions",
+      "endpoints": {
+       "t2i": "gemini-3.1-flash-lite-image",
+       "edit": "gemini-3.1-flash-lite-image"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "seedream-v5-pro",
+   "kind": "image",
+   "displayName": "Seedream 5.0 Pro",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "aspectRatios": [
+     "landscape_16_9",
+     "portrait_16_9",
+     "square_hd",
+     "landscape_4_3",
+     "portrait_4_3",
+     "square"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "bytedance/seedream/v5/pro/text-to-image",
+       "edit": "fal-ai/bytedance/seedream/v5/lite/edit"
+      }
+     },
+     {
+      "provider": "byteplus",
+      "protocol": "byteplus-images",
+      "endpoints": {
+       "t2i": "seedream-5-0-pro-260628",
+       "edit": "seedream-5-0-pro-260628"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "grok-imagine",
+   "kind": "image",
+   "displayName": "Grok Imagine 2",
+   "providerIconKey": "xai",
+   "providerName": "xAI",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1k",
+     "1.5k",
+     "2k"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "2:1",
+     "1:2",
+     "21:9"
+    ],
+    "supportsImageReference": false,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "xai",
+      "protocol": "xai",
+      "endpoints": {
+       "t2i": "grok-imagine-image-2.0"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "xai/grok-imagine-image"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "ideogram-v4",
+   "kind": "image",
+   "displayName": "Ideogram V4",
+   "providerIconKey": "ideogram",
+   "providerName": "Ideogram",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3",
+     "16:10",
+     "10:16",
+     "2:1",
+     "1:2",
+     "3:1",
+     "1:3"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "ideogram",
+      "protocol": "generic-json",
+      "endpoints": {
+       "t2i": "v2/image/generate/ideogram-4"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "ideogram/v4"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "recraft-v4.1",
+   "kind": "image",
+   "displayName": "Recraft V4.1",
+   "providerIconKey": "recraft",
+   "providerName": "Recraft",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "supportsImageReference": false,
+    "maxImages": 4
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "recraft",
+      "protocol": "generic-json",
+      "endpoints": {
+       "t2i": "recraftv4_1"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "fal-ai/recraft/v4.1/text-to-image"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "reve-2.1",
+   "kind": "image",
+   "displayName": "Reve 2.1",
+   "providerIconKey": "reve",
+   "providerName": "Reve",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "3:2",
+     "2:3",
+     "4:3",
+     "3:4",
+     "1:1"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 1
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "t2i": "reve/2.1/remix",
+       "edit": "reve/2.1/remix"
+      }
+     },
+     {
+      "provider": "reve",
+      "protocol": "generic-json",
+      "endpoints": {
+       "t2i": "v1/image/create",
+       "edit": "v1/image/remix"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "krea-2-large",
+   "kind": "image",
+   "displayName": "Krea 2 Large",
+   "providerIconKey": "krea",
+   "providerName": "Krea",
+   "allowedEndpoints": [],
+   "responseShape": "images",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "resolutions": [
+     "1K"
+    ],
+    "aspectRatios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:2",
+     "2:3",
+     "4:5",
+     "2.35:1"
+    ],
+    "supportsImageReference": true,
+    "maxImages": 1
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "krea",
+      "protocol": "generic-json",
+      "endpoints": {
+       "t2i": "generate/image/krea/krea-2/large"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "seed-audio-1.0",
+   "kind": "audio",
+   "displayName": "Seed Audio 1.0",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "general",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 1,
+    "maxReferenceImages": 1,
+    "maxReferenceAudios": 3,
+    "maxReferenceAudioSeconds": 30,
+    "referenceAudioExtensions": [
+     "wav",
+     "mp3"
+    ],
+    "referenceImagesAndAudiosExclusive": true,
+    "supportsMultilingual": true,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Describe the audio scene"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "gen": "bytedance/seed-audio-1.0"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "elevenlabs-v4-tts",
+   "kind": "audio",
+   "displayName": "ElevenLabs v4 TTS",
+   "providerIconKey": "elevenlabs",
+   "providerName": "ElevenLabs",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "tts",
+    "voices": [
+     "<fetched at runtime from GET /v2/voices>"
+    ],
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Text to speak"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "elevenlabs",
+      "protocol": "elevenlabs",
+      "endpoints": {
+       "tts": "eleven_v4"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "tts": "elevenlabs/tts/eleven-v4"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "gemini-tts",
+   "kind": "audio",
+   "displayName": "Gemini 3.8 Flash TTS",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "tts",
+    "voices": [
+     "Kore",
+     "Zephyr",
+     "Puck",
+     "Charon",
+     "Fenrir",
+     "Leda",
+     "Orus",
+     "Aoede",
+     "Callirrhoe",
+     "Autonoe",
+     "Enceladus",
+     "Iapetus",
+     "Umbriel",
+     "Algieba",
+     "Despina",
+     "Erinome",
+     "Algenib",
+     "Rasalgethi",
+     "Laomedeia",
+     "Achernar",
+     "Alnilam",
+     "Schedar",
+     "Gacrux",
+     "Pulcherrima",
+     "Achird",
+     "Zubenelgenubi",
+     "Vindemiatrix",
+     "Sadachbia",
+     "Sadaltager",
+     "Sulafat"
+    ],
+    "defaultVoice": "Kore",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": true,
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Text to speak"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "google",
+      "protocol": "gemini-interactions",
+      "endpoints": {
+       "tts": "gemini-3.8-flash-tts"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "tts": "google/gemini-3.8-flash-tts"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "elevenlabs-music",
+   "kind": "audio",
+   "displayName": "ElevenLabs Music",
+   "providerIconKey": "elevenlabs",
+   "providerName": "ElevenLabs",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "music",
+    "supportsLyrics": false,
+    "supportsInstrumental": true,
+    "supportsStyleInstructions": false,
+    "durationRange": {
+     "minimum": 3,
+     "maximum": 600,
+     "defaultValue": 90
+    },
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Describe the music style or mood"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "elevenlabs",
+      "protocol": "elevenlabs",
+      "endpoints": {
+       "music": "music_v2_5"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "music": "elevenlabs/music/v2.5"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "minimax-music-2.6",
+   "kind": "audio",
+   "displayName": "MiniMax Music 2.6",
+   "providerIconKey": "minimax",
+   "providerName": "MiniMax",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "music",
+    "supportsLyrics": true,
+    "supportsInstrumental": true,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 10,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Describe the music style or mood"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "music": "fal-ai/minimax-music/v2.6"
+      }
+     },
+     {
+      "provider": "replicate",
+      "protocol": "replicate",
+      "endpoints": {
+       "music": "minimax/music-2.6"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyria-3-pro",
+   "kind": "audio",
+   "displayName": "Lyria 3 Pro",
+   "providerIconKey": "google",
+   "providerName": "Google",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "music",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Describe the music style or mood"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "google",
+      "protocol": "gemini-interactions",
+      "endpoints": {
+       "music": "lyria-3.5"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "music": "fal-ai/lyria3/pro"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "sonilo-v1.1-video-to-music",
+   "kind": "audio",
+   "displayName": "Sonilo Music",
+   "providerIconKey": "sonilo",
+   "providerName": "Sonilo",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "music",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "durationRange": {
+     "minimum": 1,
+     "maximum": 600,
+     "defaultValue": 90
+    },
+    "minPromptLength": 0,
+    "inputs": [
+     "video",
+     "text"
+    ],
+    "promptLabel": "Describe the music style or mood",
+    "minSeconds": 1,
+    "maxSeconds": 600
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "v2m": "sonilo/v1.1/video-to-music",
+       "t2m": "sonilo/v1.1/text-to-music"
+      }
+     },
+     {
+      "provider": "sonilo",
+      "protocol": "generic-json",
+      "endpoints": {
+       "v2m": "v1/video-to-music",
+       "t2m": "v1/text-to-music"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "elevenlabs-sfx",
+   "kind": "audio",
+   "displayName": "ElevenLabs Sound Effects",
+   "providerIconKey": "elevenlabs",
+   "providerName": "ElevenLabs",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "sfx",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "durationRange": {
+     "minimum": 1,
+     "maximum": 30,
+     "defaultValue": 5
+    },
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Describe the sound"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "elevenlabs",
+      "protocol": "elevenlabs",
+      "endpoints": {
+       "sfx": "eleven_text_to_sound_v2"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "sfx": "fal-ai/elevenlabs/sound-effects/v2"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "mirelo-sfx-v1.5-video-to-audio",
+   "kind": "audio",
+   "displayName": "Mirelo SFX v1.5",
+   "providerIconKey": "mirelo",
+   "providerName": "Mirelo",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "sfx",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 0,
+    "inputs": [
+     "video"
+    ],
+    "promptLabel": "Describe the sound (optional)",
+    "minSeconds": 1,
+    "maxSeconds": 10
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "v2a": "mirelo-ai/sfx-v1.5/video-to-audio"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "sonilo-sfx",
+   "kind": "audio",
+   "displayName": "Sonilo Sound Effects",
+   "providerIconKey": "sonilo",
+   "providerName": "Sonilo",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "sfx",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 0,
+    "inputs": [
+     "video"
+    ],
+    "promptLabel": "Describe the sound (optional)",
+    "minSeconds": 1,
+    "maxSeconds": 480
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "v2a": "sonilo/v1.1/video-to-sound-effects"
+      }
+     },
+     {
+      "provider": "sonilo",
+      "protocol": "generic-json",
+      "endpoints": {
+       "v2a": "v1/video-to-sfx"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "elevenlabs-voice-isolator",
+   "kind": "audio",
+   "displayName": "ElevenLabs Voice Isolator",
+   "providerIconKey": "elevenlabs",
+   "providerName": "ElevenLabs",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "cleanup",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 0,
+    "inputs": [
+     "audio",
+     "video"
+    ],
+    "minSeconds": 1,
+    "maxSeconds": 3600
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "elevenlabs",
+      "protocol": "elevenlabs",
+      "endpoints": {
+       "cleanup": "audio-isolation"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "cleanup": "fal-ai/elevenlabs/audio-isolation"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "elevenlabs-dubbing",
+   "kind": "audio",
+   "displayName": "ElevenLabs Dubbing",
+   "providerIconKey": "elevenlabs",
+   "providerName": "ElevenLabs",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "dubbing",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": false,
+    "minPromptLength": 0,
+    "inputs": [
+     "audio",
+     "video"
+    ],
+    "minSeconds": 1,
+    "maxSeconds": 3600,
+    "targetLanguages": [
+     "es",
+     "fr",
+     "de",
+     "it",
+     "pt",
+     "ja",
+     "ko",
+     "zh",
+     "hi",
+     "ar",
+     "ru",
+     "nl",
+     "pl",
+     "tr",
+     "en"
+    ],
+    "defaultTargetLanguage": "es"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "elevenlabs",
+      "protocol": "elevenlabs",
+      "endpoints": {
+       "dub": "dubbing"
+      }
+     },
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "dub": "fal-ai/elevenlabs/dubbing"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "openai-gpt-4o-mini-tts",
+   "kind": "audio",
+   "displayName": "OpenAI TTS",
+   "providerIconKey": "openai",
+   "providerName": "OpenAI",
+   "allowedEndpoints": [],
+   "responseShape": "audio",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "category": "tts",
+    "voices": [
+     "alloy",
+     "ash",
+     "ballad",
+     "coral",
+     "echo",
+     "fable",
+     "onyx",
+     "nova",
+     "sage",
+     "shimmer",
+     "verse",
+     "marin",
+     "cedar"
+    ],
+    "defaultVoice": "marin",
+    "supportsLyrics": false,
+    "supportsInstrumental": false,
+    "supportsStyleInstructions": true,
+    "minPromptLength": 1,
+    "inputs": [
+     "text"
+    ],
+    "promptLabel": "Text to speak"
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "openai",
+      "protocol": "openai-speech",
+      "endpoints": {
+       "tts": "gpt-4o-mini-tts"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "topaz-video-upscaler",
+   "kind": "upscale",
+   "displayName": "Topaz Upscale",
+   "providerIconKey": "topaz",
+   "providerName": "Topaz",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "speed": "Slow",
+    "p75DurationSeconds": 120,
+    "maximumUpscaleFactor": 4,
+    "supportedTypes": [
+     "video"
+    ],
+    "selectSettings": [
+     {
+      "id": "targetResolution",
+      "label": "Resolution",
+      "defaultValue": "4k",
+      "options": [
+       {
+        "value": "1080p",
+        "label": "1080p"
+       },
+       {
+        "value": "4k",
+        "label": "4K"
+       }
+      ]
+     },
+     {
+      "id": "targetFPS",
+      "label": "Frame Rate",
+      "defaultValue": "source",
+      "options": [
+       {
+        "value": "source",
+        "label": "Original"
+       },
+       {
+        "value": "24",
+        "label": "24 FPS"
+       },
+       {
+        "value": "30",
+        "label": "30 FPS"
+       },
+       {
+        "value": "60",
+        "label": "60 FPS"
+       }
+      ]
+     },
+     {
+      "id": "enhancementModel",
+      "label": "Model",
+      "defaultValue": "Proteus",
+      "options": [
+       {
+        "value": "Proteus",
+        "label": "Proteus",
+        "description": "General-purpose restoration",
+        "group": "Enhance"
+       },
+       {
+        "value": "Artemis HQ",
+        "label": "Artemis HQ",
+        "description": "High-quality sources",
+        "group": "Enhance"
+       },
+       {
+        "value": "Artemis MQ",
+        "label": "Artemis MQ",
+        "description": "Medium-quality sources",
+        "group": "Enhance"
+       },
+       {
+        "value": "Artemis LQ",
+        "label": "Artemis LQ",
+        "description": "Low-quality sources",
+        "group": "Enhance"
+       },
+       {
+        "value": "Gaia HQ",
+        "label": "Gaia HQ",
+        "description": "High-quality upscaling",
+        "group": "Upscale"
+       },
+       {
+        "value": "Gaia CG",
+        "label": "Gaia CG",
+        "description": "CG and animation",
+        "group": "Upscale"
+       },
+       {
+        "value": "Nyx",
+        "label": "Nyx",
+        "description": "Denoise",
+        "group": "Denoise"
+       },
+       {
+        "value": "Starlight Precise 2.5",
+        "label": "Starlight Precise 2.5",
+        "description": "Generative restoration",
+        "group": "Generative"
+       }
+      ]
+     }
+    ],
+    "numericSettings": [
+     {
+      "id": "noise",
+      "label": "Noise",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.01
+     },
+     {
+      "id": "compression",
+      "label": "Compression",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.01
+     },
+     {
+      "id": "halo",
+      "label": "Halo",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.01
+     },
+     {
+      "id": "recover_detail",
+      "label": "Recover Detail",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.01
+     },
+     {
+      "id": "grain",
+      "label": "Grain",
+      "minimum": 0,
+      "maximum": 0.1,
+      "step": 0.01
+     }
+    ]
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "video": "fal-ai/topaz/upscale/video"
+      }
+     }
+    ]
+   },
+   "description": "Restore and upscale video with Topaz models; optional frame interpolation up to 60 FPS."
+  },
+  {
+   "id": "topaz-image-upscaler",
+   "kind": "upscale",
+   "displayName": "Topaz Upscale (Image)",
+   "providerIconKey": "topaz",
+   "providerName": "Topaz",
+   "allowedEndpoints": [],
+   "responseShape": "upscaledImage",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "speed": "Medium",
+    "p75DurationSeconds": 45,
+    "maximumUpscaleFactor": 4,
+    "supportedTypes": [
+     "image"
+    ],
+    "selectSettings": [
+     {
+      "id": "targetResolution",
+      "label": "Resolution",
+      "defaultValue": "4k",
+      "options": [
+       {
+        "value": "1080p",
+        "label": "1080p"
+       },
+       {
+        "value": "4k",
+        "label": "4K"
+       }
+      ]
+     },
+     {
+      "id": "enhancementModel",
+      "label": "Model",
+      "defaultValue": "Standard V2",
+      "options": [
+       {
+        "value": "Standard V2",
+        "label": "Standard V2"
+       },
+       {
+        "value": "High Fidelity V2",
+        "label": "High Fidelity V2"
+       },
+       {
+        "value": "Low Resolution V2",
+        "label": "Low Resolution V2"
+       },
+       {
+        "value": "CGI",
+        "label": "CGI"
+       },
+       {
+        "value": "Text Refine",
+        "label": "Text Refine"
+       },
+       {
+        "value": "Redefine",
+        "label": "Redefine"
+       },
+       {
+        "value": "Recovery V2",
+        "label": "Recovery V2"
+       }
+      ]
+     }
+    ]
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "image": "fal-ai/topaz/upscale/image"
+      }
+     }
+    ]
+   },
+   "description": "Upscale photos and graphics with Topaz image models."
+  },
+  {
+   "id": "bytedance-upscaler",
+   "kind": "upscale",
+   "displayName": "Bytedance Upscaler",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "speed": "Medium",
+    "p75DurationSeconds": 45,
+    "supportedTypes": [
+     "video"
+    ],
+    "selectSettings": [
+     {
+      "id": "targetResolution",
+      "label": "Resolution",
+      "defaultValue": "4k",
+      "options": [
+       {
+        "value": "1080p",
+        "label": "1080p"
+       },
+       {
+        "value": "4k",
+        "label": "4K"
+       }
+      ]
+     },
+     {
+      "id": "targetFPS",
+      "label": "Frame Rate",
+      "defaultValue": "source",
+      "options": [
+       {
+        "value": "source",
+        "label": "Original"
+       },
+       {
+        "value": "30",
+        "label": "30 FPS"
+       },
+       {
+        "value": "60",
+        "label": "60 FPS"
+       }
+      ]
+     },
+     {
+      "id": "enhancementPreset",
+      "label": "Preset",
+      "defaultValue": "general",
+      "options": [
+       {
+        "value": "general",
+        "label": "General"
+       },
+       {
+        "value": "ugc",
+        "label": "Ugc"
+       },
+       {
+        "value": "short_series",
+        "label": "Short Series"
+       },
+       {
+        "value": "aigc",
+        "label": "Aigc"
+       },
+       {
+        "value": "old_film",
+        "label": "Old Film"
+       }
+      ]
+     }
+    ]
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "video": "fal-ai/bytedance-upscaler/upscale/video"
+      }
+     }
+    ]
+   },
+   "description": "Fast video super-resolution up to 4K with optional frame-rate conversion."
+  },
+  {
+   "id": "seedvr-image-upscaler",
+   "kind": "upscale",
+   "displayName": "SeedVR2 (Image)",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "upscaledImage",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "speed": "Fast",
+    "p75DurationSeconds": 45,
+    "maximumUpscaleFactor": 10,
+    "supportedTypes": [
+     "image"
+    ],
+    "selectSettings": [
+     {
+      "id": "targetResolution",
+      "label": "Resolution",
+      "defaultValue": "4k",
+      "options": [
+       {
+        "value": "1080p",
+        "label": "1080p"
+       },
+       {
+        "value": "4k",
+        "label": "4K"
+       }
+      ]
+     }
+    ],
+    "numericSettings": [
+     {
+      "id": "noise",
+      "label": "Noise",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.05
+     }
+    ]
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "image": "fal-ai/seedvr/upscale/image"
+      }
+     }
+    ]
+   },
+   "description": "One-step diffusion upscaler for images."
+  },
+  {
+   "id": "seedvr-video-upscaler",
+   "kind": "upscale",
+   "displayName": "SeedVR2 (Video)",
+   "providerIconKey": "bytedance",
+   "providerName": "ByteDance",
+   "allowedEndpoints": [],
+   "responseShape": "video",
+   "paidOnly": false,
+   "uiCapabilities": {
+    "speed": "Slow",
+    "p75DurationSeconds": 120,
+    "maximumUpscaleFactor": 10,
+    "supportedTypes": [
+     "video"
+    ],
+    "selectSettings": [
+     {
+      "id": "targetResolution",
+      "label": "Resolution",
+      "defaultValue": "4k",
+      "options": [
+       {
+        "value": "1080p",
+        "label": "1080p"
+       },
+       {
+        "value": "4k",
+        "label": "4K"
+       }
+      ]
+     }
+    ],
+    "numericSettings": [
+     {
+      "id": "noise",
+      "label": "Noise",
+      "minimum": 0,
+      "maximum": 1,
+      "step": 0.05
+     }
+    ]
+   },
+   "byok": {
+    "routes": [
+     {
+      "provider": "fal",
+      "protocol": "fal-queue",
+      "endpoints": {
+       "video": "fal-ai/seedvr/upscale/video"
+      }
+     }
+    ]
+   },
+   "description": "One-step diffusion upscaler for video."
+  }
+ ]
+}

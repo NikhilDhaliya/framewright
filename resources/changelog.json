@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-14",
+      "sections": [
+        {
+          "heading": "Meet Framewright",
+          "items": [
+            "The Linux port is now called Framewright, with a new icon. It is based on Palmier Pro (GPLv3) by Palmier, Inc.",
+            "Settings, models and caches move from the old palmier-pro folders to framewright automatically on first launch. Existing .palmier projects open as before.",
+            "Install as an AppImage or .deb, and connect Claude Desktop with the bundled framewright.mcpb extension.",
+            "AI generation with your own fal, Google and ElevenLabs keys."
+          ]
+        },
+        {
+          "heading": "First Linux release",
+          "items": [
+            "The full editor on Linux: media library, multi-track timeline, preview, inspector and keyboard shortcuts.",
+            "Bring your own API keys for AI chat (Anthropic, OpenAI) and media generation. Keys stay in your system keyring.",
+            "Local transcription and captions with whisper.cpp, plus optional cloud speech-to-text with your own key.",
+            "On-device visual search: find clips by describing them. Nothing leaves your computer.",
+            "Built-in MCP server so Claude Code, Codex, Cursor and other agents can inspect and edit your project."
+          ]
+        },
+        {
+          "heading": "Export",
+          "items": [
+            "MP4, MOV, WebM, GIF, PNG still and audio-only exports.",
+            "Final Cut Pro XML (FCPXML) and Premiere / Resolve XML for round-tripping to other editors."
+          ]
+        }
+      ]
+    }
+  ]
+}

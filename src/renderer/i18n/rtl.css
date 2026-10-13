@@ -1,0 +1,21 @@
+/*
+ * Right-to-left locales (ar, he) mirror the app layout through <html dir="rtl">. Time and value axes keep running
+ * left to right, as in other video editors: the timeline pane, the transport, sliders, curves, wheels and timecodes.
+ */
+[dir='rtl'] .pp-tl-pane,
+[dir='rtl'] .pp-transport,
+[dir='rtl'] .pp-slider,
+[dir='rtl'] .pp-insp-curves,
+[dir='rtl'] .pp-insp-wheels,
+[dir='rtl'] .pp-timecode,
+[dir='rtl'] .pp-slip-twoup,
+[dir='rtl'] .pp-scrub,
+[dir='rtl'] .mono {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Translated labels can be longer than the English ones; segmented controls keep one line. */
+.pp-segment {
+  white-space: nowrap;
+}

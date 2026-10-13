@@ -1,0 +1,54 @@
+/* Matte sheet (05 §4.12): width 280, padding 16, row gap 14; rows icon 11 px / 18 wide, label 11 px medium, control 116 px. */
+.pp-matte-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+}
+.pp-matte-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pp-matte-icon {
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+  color: var(--pp-text-secondary);
+}
+.pp-matte-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--pp-text-primary);
+}
+.pp-matte-control {
+  width: 116px;
+  display: flex;
+  justify-content: flex-end;
+}
+.pp-matte-size {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--pp-text-tertiary);
+}
+.pp-matte-error {
+  font-size: 10px;
+  color: var(--pp-status-error);
+}
+.pp-matte-create {
+  margin-top: 4px;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: var(--pp-accent);
+  color: var(--pp-bg-base);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pp-matte-create:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

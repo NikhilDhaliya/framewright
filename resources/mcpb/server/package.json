@@ -1,0 +1,8 @@
+{
+  "name": "framewright-mcpb-shim",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Stdio→HTTP shim packaged inside framewright.mcpb for Claude Desktop. Reconnects indefinitely across Framewright restarts. Derived from the Palmier Pro (GPLv3) mcpb shim by Palmier, Inc.",
+  "license": "GPL-3.0-only",
+  "main": "index.js"
+}

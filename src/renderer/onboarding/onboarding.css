@@ -1,0 +1,191 @@
+/* Onboarding and What's New overlays on Home (spec 05 §8.6). */
+.pp-onb-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  animation: pp-fade-in var(--pp-anim-transition) ease-out;
+}
+.pp-onb-card,
+.pp-wn-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 56px);
+  border-radius: 12px;
+  background: var(--pp-sheet-bg);
+  backdrop-filter: blur(30px);
+  border: 0.5px solid var(--pp-border-primary);
+  box-shadow: var(--pp-shadow-lg);
+  overflow: hidden;
+}
+.pp-onb-card {
+  width: 520px;
+  height: 420px;
+}
+.pp-onb-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 28px 28px;
+}
+.pp-onb-card.question .pp-onb-body {
+  padding-bottom: 10px;
+}
+.pp-onb-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 28px;
+}
+.pp-onb-footer.flush {
+  padding: 0;
+}
+.pp-onb-title {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: var(--pp-text-primary);
+}
+.pp-onb-detail {
+  font-size: 12px;
+  color: var(--pp-text-secondary);
+  line-height: 1.45;
+}
+/* Brand-neutral stand-in for the Mac's welcome-butterfly.jpg until the rebrand ships artwork. */
+.pp-onb-hero {
+  height: 240px;
+  flex: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  background:
+    radial-gradient(120% 90% at 20% 15%, rgba(255, 122, 56, 0.85), transparent 60%),
+    radial-gradient(110% 100% at 85% 90%, rgba(242, 38, 71, 0.8), transparent 60%),
+    linear-gradient(135deg, #2a1630, #121424);
+}
+.pp-onb-questions,
+.pp-onb-keys {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+.pp-onb-question {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pp-onb-question-title {
+  font-size: 13px;
+  color: var(--pp-text-primary);
+}
+.pp-onb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pp-onb-chip {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--pp-text-primary);
+  background: color-mix(in srgb, var(--pp-text-secondary) 15%, transparent);
+}
+.pp-onb-chip:hover {
+  background: color-mix(in srgb, var(--pp-text-secondary) 25%, transparent);
+}
+.pp-onb-chip.on {
+  background: var(--pp-accent);
+  color: var(--pp-accent-on);
+}
+.pp-onb-secondary.pp-capsule {
+  background: color-mix(in srgb, var(--pp-accent) 15%, transparent);
+}
+.pp-onb-key-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-onb-key {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pp-onb-key-title {
+  width: 84px;
+  flex: none;
+  font-size: 12px;
+  color: var(--pp-text-secondary);
+}
+.pp-onb-key-input {
+  flex: 1;
+  min-width: 0;
+  height: 26px;
+  padding: 0 8px;
+  font-size: 11px;
+  border-radius: 6px;
+  color: var(--pp-text-primary);
+  background: var(--pp-bg-raised);
+  border: 0.5px solid var(--pp-border-subtle);
+  outline: none;
+}
+.pp-onb-key-input:focus {
+  border-color: var(--pp-accent);
+}
+.pp-onb-key-ok {
+  color: var(--pp-status-success);
+}
+.pp-wn-card {
+  width: 640px;
+  margin: 28px 0;
+  padding: 28px;
+  gap: 14px;
+}
+.pp-wn-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pp-wn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pp-wn-heading {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--pp-text-primary);
+}
+.pp-wn-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-wn-list li {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--pp-text-secondary);
+}
+.pp-wn-bullet {
+  color: var(--pp-text-tertiary);
+}

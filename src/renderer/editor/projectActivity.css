@@ -1,0 +1,55 @@
+/* Project Activity popover (ProjectActivityView: width 340, list height 420, padding md). */
+.pp-popover.pp-activity {
+  width: 340px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-activity-header {
+  font-size: var(--pp-fs-sm);
+  font-weight: 500;
+  color: var(--pp-text-primary);
+}
+.pp-activity-list {
+  height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pp-activity-empty {
+  padding: 6px 0;
+  font-size: var(--pp-fs-xs);
+  color: var(--pp-text-muted);
+}
+.pp-activity-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 2px;
+  font-size: var(--pp-fs-xs);
+}
+.pp-activity-icon {
+  width: 14px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--pp-text-tertiary);
+}
+.pp-activity-model {
+  min-width: 0;
+  color: var(--pp-text-secondary);
+}
+.pp-activity-status {
+  flex-shrink: 0;
+  font-weight: 500;
+  color: var(--pp-text-secondary);
+}
+.pp-activity-time {
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: var(--pp-text-muted);
+}
+.pp-activity-row.failed .pp-activity-icon,
+.pp-activity-row.failed .pp-activity-status { color: var(--pp-status-error); }

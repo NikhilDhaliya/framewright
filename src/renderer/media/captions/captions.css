@@ -1,0 +1,201 @@
+/* Captions tab (spec 07 §1.9) and Index ▸ Transcript (§1.11). */
+.pp-captions {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--pp-bg-surface);
+}
+.pp-captions.transcript-only { flex: 0 0 auto; }
+.pp-cap-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.pp-captions.transcript-only .pp-cap-scroll { overflow: visible; }
+.pp-cap-preview-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--pp-fs-xxs);
+  font-weight: 500;
+  color: var(--pp-text-secondary);
+}
+.pp-cap-radios { display: inline-flex; gap: 10px; }
+.pp-cap-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--pp-fs-sm);
+  font-weight: 500;
+  color: var(--pp-text-secondary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: default;
+}
+.pp-cap-radio.on { color: var(--pp-text-primary); font-weight: 600; }
+.pp-cap-radio:disabled { opacity: 0.35; }
+.pp-cap-radio-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--pp-border-primary);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pp-cap-radio.on .pp-cap-radio-dot { border-color: var(--pp-accent); background: var(--pp-accent); box-shadow: inset 0 0 0 2.5px var(--pp-bg-surface); }
+.pp-cap-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border-top: 1px solid var(--pp-border-primary);
+  background: var(--pp-bg-surface);
+  min-height: 40px;
+  box-sizing: border-box;
+}
+.pp-cap-footer.inline { border-top: none; border-bottom: 1px solid var(--pp-border-primary); }
+.pp-cap-note {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--pp-fs-xs);
+  color: var(--pp-text-secondary);
+  line-height: 1.3;
+}
+.pp-cap-agent { display: inline-flex; align-items: center; gap: 2px; width: auto !important; padding: 0 6px; height: 22px; }
+.pp-cap-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: color-mix(in srgb, var(--pp-bg-surface) 80%, transparent);
+  font-size: var(--pp-fs-sm);
+  color: var(--pp-text-secondary);
+  z-index: 5;
+}
+
+/* ---------- Index tab ---------- */
+.pp-index {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.pp-index-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  min-height: 30px;
+  flex-shrink: 0;
+}
+.pp-index-modes { display: inline-flex; gap: 10px; }
+.pp-index-mode {
+  height: 22px;
+  font-size: var(--pp-fs-sm);
+  color: var(--pp-text-tertiary);
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  cursor: default;
+}
+.pp-index-mode.on { color: var(--pp-text-primary); font-weight: 600; border-bottom-color: var(--pp-text-primary); }
+.pp-index-hairline { height: 1px; background: var(--pp-border-primary); flex-shrink: 0; }
+.pp-index-body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+.pp-index-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--pp-fs-sm);
+  color: var(--pp-text-tertiary);
+  padding: 16px;
+  text-align: center;
+}
+.pp-tr-rows { padding: 4px; display: flex; flex-direction: column; }
+.pp-tr-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: default;
+}
+.pp-tr-row:hover { background: var(--pp-fill-subtle); }
+.pp-tr-row.active { background: var(--pp-fill-soft); }
+.pp-tr-time {
+  width: 68px;
+  flex-shrink: 0;
+  font-family: var(--pp-font-mono);
+  font-size: var(--pp-fs-xxs);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--pp-text-tertiary);
+}
+.pp-tr-dur {
+  width: 28px;
+  flex-shrink: 0;
+  font-family: var(--pp-font-mono);
+  font-size: var(--pp-fs-xxs);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--pp-text-muted);
+}
+.pp-tr-text { flex: 1; min-width: 0; font-size: var(--pp-fs-sm-md); color: var(--pp-text-primary); line-height: 1.35; }
+.pp-tr-row.current .pp-tr-text { color: var(--pp-timecode); }
+
+/* ---------- Caption preview overlay (§1.10) ---------- */
+.pp-cap-preview {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.pp-cap-preview canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pp-cap-preview-drag { position: absolute; pointer-events: auto; cursor: grab; }
+.pp-cap-preview-drag:active { cursor: grabbing; }
+.pp-cap-preview-guide { position: absolute; background: color-mix(in srgb, var(--pp-timecode) 80%, transparent); pointer-events: none; }
+.pp-cap-preview-tag {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 8px;
+  font-size: var(--pp-fs-xxs);
+  font-weight: 500;
+  color: var(--pp-text-primary);
+  background: color-mix(in srgb, var(--pp-bg-surface) 80%, transparent);
+  border: 0.5px solid var(--pp-border-primary);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* ---------- Subtitle preview (§1.8 SubtitlePreviewView) ---------- */
+.pp-subtitle-preview {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background: var(--pp-bg-preview-canvas);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  user-select: text;
+}
+.pp-subtitle-preview.error { align-items: center; justify-content: center; gap: 8px; font-size: var(--pp-fs-sm); color: var(--pp-text-secondary); }
+.pp-subtitle-cue-head { display: flex; gap: 8px; font-family: var(--pp-font-mono); font-size: 10px; font-weight: 500; font-variant-ligatures: none; font-feature-settings: 'liga' 0, 'calt' 0; }
+.pp-subtitle-cue-head .index { color: var(--pp-text-tertiary); }
+.pp-subtitle-cue-head .time { color: var(--pp-timecode); }
+.pp-subtitle-cue-text { margin-top: 2px; font-size: 11px; color: var(--pp-text-primary); white-space: pre-wrap; }

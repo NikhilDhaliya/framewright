@@ -1,0 +1,135 @@
+{
+  "name": "framewright",
+  "productName": "Framewright",
+  "version": "0.1.0",
+  "description": "Framewright: an AI-native video editor for Linux with an MCP server for AI agents. Based on Palmier Pro (GPLv3) by Palmier, Inc.",
+  "author": "Nikhil Dhaliya",
+  "homepage": "https://github.com/NikhilDhaliya/aieditor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikhilDhaliya/aieditor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NikhilDhaliya/aieditor/issues"
+  },
+  "desktopName": "framewright.desktop",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "main": "out/main/index.cjs",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && electron .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "dist": "npm run build && node scripts/fetch-assets.mjs --ffmpeg-source && npm run licenses && node scripts/pack-mcpb.mjs && electron-builder --linux",
+    "logo": "python3 scripts/icons/build-logo.py",
+    "icons": "env -u WAYLAND_DISPLAY xvfb-run -a electron scripts/icons/render-icons.cjs --ozone-platform=x11",
+    "mcpb": "node scripts/pack-mcpb.mjs",
+    "postinstall": "node scripts/fetch-assets.mjs",
+    "licenses": "node scripts/third-party-licenses.mjs"
+  },
+  "dependencies": {
+    "@huggingface/tokenizers": "0.2.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "fflate": "^0.8.3",
+    "ffmpeg-static": "5.3.0",
+    "immer": "^11.1.21",
+    "lottie-web": "5.13.0",
+    "onnxruntime-node": "1.30.0",
+    "sherpa-onnx-node": "1.13.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "lucide-react": "^1.56.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4",
+    "zustand": "^5.0.15"
+  },
+  "build": {
+    "appId": "io.github.nikhildhaliya.framewright",
+    "productName": "Framewright",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/**",
+      "resources/**",
+      "package.json",
+      "LICENSE",
+      "NOTICE",
+      "THIRD_PARTY_LICENSES.txt"
+    ],
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**",
+      "node_modules/onnxruntime-node/**",
+      "node_modules/onnxruntime-common/**",
+      "node_modules/sherpa-onnx-node/**",
+      "node_modules/sherpa-onnx-linux-x64/**",
+      "resources/bin/**"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "AudioVideo",
+      "icon": "resources/icons",
+      "executableName": "framewright",
+      "synopsis": "AI-native video editor with an MCP server for AI agents",
+      "description": "AI-native video editor for Linux, based on Palmier Pro (GPLv3) by Palmier, Inc.",
+      "maintainer": "Nikhil Dhaliya",
+      "vendor": "Nikhil Dhaliya",
+      "desktop": {
+        "entry": {
+          "Name": "Framewright",
+          "GenericName": "Video Editor",
+          "Keywords": "video;editor;timeline;ai;mcp;",
+          "StartupWMClass": "Framewright"
+        }
+      }
+    },
+    "fileAssociations": [
+      {
+        "ext": "palmier",
+        "name": "Framewright Project",
+        "description": "Framewright / Palmier Pro project package",
+        "mimeType": "application/x-palmier-project",
+        "role": "Editor"
+      }
+    ],
+    "executableName": "framewright",
+    "copyright": "Copyright (C) 2026 Palmier, Inc.; Linux port and modifications Copyright (C) 2026 Nikhil Dhaliya. GPL-3.0-only.",
+    "artifactName": "${productName}-${version}-${arch}.${ext}",
+    "deb": {
+      "packageCategory": "video",
+      "priority": "optional"
+    },
+    "publish": null,
+    "extraFiles": [
+      {
+        "from": "LICENSE",
+        "to": "LICENSE"
+      },
+      {
+        "from": "NOTICE",
+        "to": "NOTICE"
+      },
+      {
+        "from": "THIRD_PARTY_LICENSES.txt",
+        "to": "THIRD_PARTY_LICENSES.txt"
+      }
+    ]
+  }
+}

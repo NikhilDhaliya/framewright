@@ -1,0 +1,92 @@
+{
+  "Ripple timeline markers": "Ripple Timeline Markers",
+  "Target language": "Target Language",
+  "Export (Ctrl+E)": {
+    "mac": "Export (⌘E)",
+    "replace": [
+      [
+        "⌘E",
+        "Ctrl+E"
+      ]
+    ]
+  },
+  "Search (Ctrl+K)": {
+    "mac": "Search (⌘K)",
+    "replace": [
+      [
+        "⌘K",
+        "Ctrl+K"
+      ]
+    ]
+  },
+  "Split at Playhead (Ctrl+K)": {
+    "mac": "Split at Playhead (⌘K)",
+    "replace": [
+      [
+        "⌘K",
+        "Ctrl+K"
+      ]
+    ]
+  },
+  "Undo (Ctrl+Z)": {
+    "mac": "Undo (⌘Z)",
+    "replace": [
+      [
+        "⌘Z",
+        "Ctrl+Z"
+      ]
+    ]
+  },
+  "Redo (Ctrl+Shift+Z)": {
+    "mac": "Redo (⇧⌘Z)",
+    "replace": [
+      [
+        "⇧⌘Z",
+        "Ctrl+Shift+Z"
+      ]
+    ]
+  },
+  "Browse Community Skills": {
+    "mac": "Browse Community Skills ↗",
+    "replace": [
+      [
+        " ↗",
+        ""
+      ],
+      [
+        "↗",
+        ""
+      ]
+    ]
+  },
+  "Generate a lower-cost {0} preview that can be enhanced later.": {
+    "mac": "Generate a lower-cost 720p preview that can be enhanced later.",
+    "replace": [
+      [
+        "720p",
+        "{0}"
+      ]
+    ]
+  },
+  "Streaming through your {0} API key (BYOK)": {
+    "mac": "Streaming through your OpenAI API key (BYOK)",
+    "replace": [
+      [
+        "OpenAI",
+        "{0}"
+      ]
+    ]
+  },
+  "using {0} API key": {
+    "mac": "using OpenAI API key",
+    "replace": [
+      [
+        "OpenAI",
+        "{0}"
+      ]
+    ]
+  },
+  "Uppercase": "UPPERCASE",
+  "Lowercase": "lowercase",
+  "Format": "File Type"
+}

@@ -1,0 +1,122 @@
+/* Export sheet queue pane (Mac ExportView log pane, 420 px) and the title bar's pulsing export dot (05 §2.2). */
+
+.pp-export-sheet {
+  flex-direction: row;
+}
+.pp-export-sheet > .pp-dlg {
+  flex: 0 1 600px;
+  min-width: 0;
+  overflow-y: auto;
+}
+.pp-export-queue {
+  flex: 0 0 420px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--pp-bg-raised);
+  border-left: 1px solid var(--pp-border-primary);
+}
+.pp-export-queue-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--pp-border-subtle, var(--pp-border-primary));
+}
+.pp-export-queue-title {
+  font-size: var(--pp-fs-md);
+  font-weight: 600;
+  color: var(--pp-text-primary);
+}
+.pp-export-queue-count {
+  font-size: var(--pp-fs-xs);
+  font-weight: 600;
+  color: var(--pp-text-secondary);
+}
+.pp-export-queue-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.pp-export-queue-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--pp-fs-sm);
+  color: var(--pp-text-muted);
+}
+.pp-export-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-bottom: 1px solid var(--pp-border-subtle, var(--pp-border-primary));
+}
+.pp-export-row-time {
+  width: 56px;
+  flex-shrink: 0;
+  font-size: var(--pp-fs-xxs);
+  color: var(--pp-text-muted);
+  white-space: nowrap;
+}
+.pp-export-row-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pp-export-row-icon.queued { color: var(--pp-text-tertiary); }
+.pp-export-row-icon.running { color: var(--pp-accent); }
+.pp-export-row-icon.completed { color: var(--pp-status-success); }
+.pp-export-row-icon.failed { color: var(--pp-status-error); }
+.pp-export-row-icon.cancelled { color: var(--pp-text-muted); }
+.pp-export-row-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.pp-export-row-name {
+  font-size: var(--pp-fs-xs);
+  font-weight: 500;
+  color: var(--pp-text-primary);
+}
+.pp-export-row-error {
+  font-size: var(--pp-fs-xxs);
+  color: var(--pp-status-error);
+}
+.pp-export-row-progress {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.pp-export-row-pct {
+  width: 32px;
+  text-align: right;
+  font-size: var(--pp-fs-xs);
+  color: var(--pp-text-secondary);
+}
+.pp-export-row-action {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Title bar Export capsule: 6 px dot pulsing 1 ↔ 0.35 over 0.8 s while a job of this project runs. */
+.pp-export-activity-dot {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--pp-status-warning);
+  animation: pp-export-pulse 0.8s ease-in-out infinite alternate;
+}
+@keyframes pp-export-pulse {
+  from { opacity: 1; }
+  to { opacity: 0.35; }
+}

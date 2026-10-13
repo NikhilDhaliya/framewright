@@ -1,0 +1,11 @@
+# Export environment for export_onnx.py (CPU-only torch; see the script's usage block).
+torch==2.8.0
+torchaudio==2.8.0
+numpy<2.3
+einops==0.8.1
+rotary-embedding-torch==0.8.9
+soxr
+onnx==1.17.0
+onnxscript==0.7.2
+onnxruntime==1.23.2
+beat_this @ https://github.com/CPJKU/beat_this/archive/refs/heads/main.zip

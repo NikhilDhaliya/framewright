@@ -1,0 +1,173 @@
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --pp-bg-base: #18191c;
+  --pp-bg-surface: #1e1f23;
+  --pp-bg-raised: #26272c;
+  --pp-bg-prominent: #303137;
+  --pp-bg-placeholder: var(--pp-bg-raised);
+  --pp-bg-preview-canvas: #000000;
+
+  --pp-border-primary: rgba(255, 255, 255, 0.1);
+  --pp-border-subtle: rgba(255, 255, 255, 0.07);
+  --pp-border-divider: rgba(255, 255, 255, 0.24);
+  --pp-border-panel: #000000;
+  --pp-border-timeline-clip: #000000;
+  --pp-border-timeline-clip-selected: #ffffff;
+  --pp-border-timeline-marker: #000000;
+  --pp-border-timeline-marker-selected: #ffffff;
+
+  --pp-text-primary: rgba(255, 255, 255, 0.98);
+  --pp-text-secondary: rgba(255, 255, 255, 0.84);
+  --pp-text-tertiary: rgba(255, 255, 255, 0.68);
+  --pp-text-muted: rgba(255, 255, 255, 0.46);
+
+  --pp-accent: #ececec;
+  --pp-accent-on: var(--pp-bg-base);
+  --pp-timecode: #f29933;
+  --pp-playhead: #ff524d;
+  --pp-link: #419cff;
+  --pp-update-accent: var(--pp-timecode);
+
+  --pp-status-error: #e54f4f;
+  --pp-status-success: #4fb85f;
+  --pp-status-warning: #ff9f0a;
+  --pp-status-pending: #ffd60a;
+
+  --pp-agent-added: #32d74b;
+  --pp-agent-mutated: #ff9f0a;
+  --pp-agent-read: #64748b;
+  --pp-agent-read-fill: rgba(100, 116, 139, 0.08);
+
+  --pp-fill-subtle: rgba(255, 255, 255, 0.039);
+  --pp-fill-hint: rgba(255, 255, 255, 0.059);
+  --pp-fill-faint: rgba(255, 255, 255, 0.078);
+  --pp-fill-soft: rgba(255, 255, 255, 0.098);
+  --pp-fill-muted: rgba(255, 255, 255, 0.147);
+  --pp-fill-moderate: rgba(255, 255, 255, 0.245);
+
+  --pp-multicam: #ff453a;
+  --pp-system-red: #ff453a;
+  --pp-system-orange: #ff9f0a;
+  --pp-system-yellow: #ffd60a;
+  --pp-system-green: #32d74b;
+  --pp-system-blue: #0a84ff;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --pp-bg-base: #f1f0ed;
+  --pp-bg-surface: #f5f4f1;
+  --pp-bg-raised: #f9f8f5;
+  --pp-bg-prominent: #fcfbf8;
+  --pp-bg-placeholder: var(--pp-bg-raised);
+  --pp-bg-preview-canvas: #000000;
+
+  --pp-border-primary: rgba(0, 0, 0, 0.2);
+  --pp-border-subtle: rgba(0, 0, 0, 0.14);
+  --pp-border-divider: rgba(0, 0, 0, 0.44);
+  --pp-border-panel: rgba(0, 0, 0, 0.18);
+  --pp-border-timeline-clip: #ffffff;
+  --pp-border-timeline-clip-selected: #000000;
+  --pp-border-timeline-marker: #ffffff;
+  --pp-border-timeline-marker-selected: #000000;
+
+  --pp-text-primary: rgba(0, 0, 0, 0.92);
+  --pp-text-secondary: rgba(0, 0, 0, 0.78);
+  --pp-text-tertiary: rgba(0, 0, 0, 0.66);
+  --pp-text-muted: rgba(0, 0, 0, 0.46);
+
+  --pp-accent: #303030;
+  --pp-accent-on: var(--pp-bg-base);
+  --pp-timecode: #944a05;
+  --pp-playhead: #ff2e29;
+  --pp-link: #0068da;
+
+  --pp-status-error: #b32417;
+  --pp-status-success: #177347;
+  --pp-status-warning: #ff9500;
+  --pp-status-pending: #ffcc00;
+
+  --pp-agent-added: #28cd41;
+  --pp-agent-mutated: #ff9500;
+
+  --pp-fill-subtle: rgba(0, 0, 0, 0.037);
+  --pp-fill-hint: rgba(0, 0, 0, 0.055);
+  --pp-fill-faint: rgba(0, 0, 0, 0.074);
+  --pp-fill-soft: rgba(0, 0, 0, 0.092);
+  --pp-fill-muted: rgba(0, 0, 0, 0.138);
+  --pp-fill-moderate: rgba(0, 0, 0, 0.23);
+
+  --pp-multicam: #ff3b30;
+  --pp-system-red: #ff3b30;
+  --pp-system-orange: #ff9500;
+  --pp-system-yellow: #ffcc00;
+  --pp-system-green: #28cd41;
+  --pp-system-blue: #007aff;
+}
+
+:root {
+  --pp-overlay-bg: #000000;
+  --pp-overlay-primary: #ffffff;
+  --pp-overlay-secondary: rgba(255, 255, 255, 0.8);
+  --pp-overlay-tertiary: rgba(255, 255, 255, 0.62);
+  --pp-overlay-muted: rgba(255, 255, 255, 0.34);
+  --pp-overlay-error: #e54f4f;
+
+  --pp-clip-video: #1d5878;
+  --pp-clip-audio: #2e7765;
+  --pp-clip-image: #715486;
+  --pp-clip-text: #715486;
+  --pp-clip-animation: #a07822;
+  --pp-clip-sequence: #b9b29a;
+
+  --pp-slider-temp-gradient: linear-gradient(90deg, #528ceb, #f2b852);
+  --pp-slider-tint-gradient: linear-gradient(90deg, #6bc773, #d161b8);
+  --pp-slider-luma-gradient: linear-gradient(90deg, #0d0d0d, #f2f2f2);
+
+  --pp-meter-green: #14c738;
+  --pp-meter-yellow: #fad61a;
+  --pp-meter-red: #e63d33;
+
+  --pp-curve-red: #ff382e;
+  --pp-curve-green: #52d15c;
+  --pp-curve-blue: #528fff;
+
+  --pp-r-xs: 3px;
+  --pp-r-xs-sm: 4px;
+  --pp-r-sm: 6px;
+  --pp-r-md: 10px;
+  --pp-r-md-lg: 12px;
+  --pp-r-lg: 14px;
+  --pp-r-xl: 20px;
+
+  --pp-fs-micro: 8px;
+  --pp-fs-xxs: 9px;
+  --pp-fs-xs: 10px;
+  --pp-fs-sm: 11px;
+  --pp-fs-sm-md: 12px;
+  --pp-fs-md: 13px;
+  --pp-fs-md-lg: 14px;
+  --pp-fs-lg: 15px;
+  --pp-fs-xl: 18px;
+  --pp-fs-title1: 22px;
+  --pp-fs-title2: 28px;
+  --pp-fs-display: 36px;
+
+  --pp-shadow-sm: 0 0.5px 2px rgba(0, 0, 0, 0.3);
+  --pp-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --pp-shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.25);
+  --pp-shadow-overlay: 0 -8px 48px rgba(0, 0, 0, 0.55);
+
+  --pp-anim-hover: 150ms;
+  --pp-anim-transition: 200ms;
+
+  --pp-font-ui: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+  --pp-font-mono: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
+  --pp-font-serif: Georgia, 'Times New Roman', serif;
+
+  --pp-titlebar-h: 28px;
+  --pp-sheet-bg: color-mix(in srgb, var(--pp-bg-surface) 92%, transparent);
+}

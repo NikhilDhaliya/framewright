@@ -1,0 +1,10 @@
+.pp-audio-note { font-size: 10px; color: var(--pp-text-tertiary); padding: 2px 0; }
+.pp-audio-status { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--pp-text-secondary); padding: 2px 0 4px; }
+.pp-audio-status-error { color: var(--pp-status-error); }
+.pp-audio-actions { display: flex; align-items: center; gap: 8px; padding: 4px 0; }
+.pp-audio-count { font-size: 11px; color: var(--pp-text-secondary); font-variant-numeric: tabular-nums; }
+.pp-speaker-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px 0; }
+.pp-speaker-label { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.pp-speaker-color { width: 30px; height: 20px; padding: 0; border: none; background: none; cursor: pointer; }
+.pp-speaker-name { width: 96px; min-width: 0; height: 20px; font-size: 11px; color: var(--pp-text-primary); background: var(--pp-bg-field, rgba(255,255,255,0.06)); border: 1px solid transparent; border-radius: 4px; padding: 0 4px; }
+.pp-speaker-remove { border: none; background: none; color: var(--pp-text-tertiary); cursor: pointer; padding: 0; display: flex; }

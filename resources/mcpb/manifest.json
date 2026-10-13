@@ -1,0 +1,44 @@
+{
+  "manifest_version": "0.4",
+  "name": "framewright",
+  "display_name": "Framewright",
+  "version": "0.1.0",
+  "description": "Edit your videos with Framewright from Claude Desktop.",
+  "long_description": "Connects Claude Desktop to the local MCP server inside Framewright — an AI-native video editor for Linux, based on Palmier Pro (GPLv3) by Palmier, Inc. Once installed, Claude can read your timeline, edit clips, generate media, and manage tracks.",
+  "icon": "icon.png",
+  "author": {
+    "name": "Nikhil Dhaliya"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikhilDhaliya/aieditor"
+  },
+  "homepage": "https://github.com/NikhilDhaliya/aieditor",
+  "license": "GPL-3.0-only",
+  "keywords": [
+    "video",
+    "editor",
+    "timeline",
+    "creative",
+    "media"
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ]
+    }
+  }
+}

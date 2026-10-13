@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Framewright app icon (original artwork, GPL-3.0-only like the rest of the app): an "F" built from timeline
+       clips inside a viewfinder frame. Source of truth for resources/icons/*.png (scripts/icons/render-icons.cjs). -->
+  <defs>
+    <linearGradient id="fw-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B2F95"/>
+      <stop offset="0.55" stop-color="#2A5BA8"/>
+      <stop offset="1" stop-color="#0E9A92"/>
+    </linearGradient>
+    <linearGradient id="fw-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFC94D"/>
+      <stop offset="1" stop-color="#FF8B3D"/>
+    </linearGradient>
+    <linearGradient id="fw-sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#fw-bg)"/>
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#fw-sheen)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M216 336 V256 a40 40 0 0 1 40 -40 H336"/>
+    <path d="M688 216 H768 a40 40 0 0 1 40 40 V336"/>
+    <path d="M808 688 V768 a40 40 0 0 1 -40 40 H688"/>
+    <path d="M336 808 H256 a40 40 0 0 1 -40 -40 V688"/>
+  </g>
+  <rect x="336" y="320" width="88" height="384" rx="44" fill="#FFFFFF"/>
+  <rect x="336" y="320" width="352" height="88" rx="44" fill="#FFFFFF"/>
+  <rect x="440" y="468" width="208" height="88" rx="44" fill="url(#fw-accent)"/>
+  <rect x="700" y="440" width="20" height="264" rx="10" fill="#FFFFFF" fill-opacity="0.9"/>
+  <circle cx="710" cy="436" r="26" fill="#FFFFFF" fill-opacity="0.9"/>
+</svg>

@@ -1,0 +1,193 @@
+/* Smart search: index status (05 §4.11), Moments / Spoken sections (05 §4.10). */
+
+.pp-index-status,
+.pp-index-button {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  white-space: nowrap;
+  font-size: var(--pp-fs-xs);
+}
+.pp-index-status {
+  gap: 4px;
+  color: var(--pp-text-tertiary);
+}
+.pp-index-status .pp-spinner {
+  width: 10px;
+  height: 10px;
+}
+.pp-index-button {
+  gap: 2px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: 500;
+  color: var(--pp-text-secondary);
+}
+.pp-index-ring {
+  flex: none;
+}
+.pp-index-ring circle {
+  fill: none;
+  stroke-width: 1.5;
+}
+.pp-index-ring .track {
+  stroke: var(--pp-border-subtle);
+}
+.pp-index-ring .arc {
+  stroke: var(--pp-text-secondary);
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.2s linear;
+}
+
+.pp-smart-header {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: default;
+}
+.pp-smart-header .chev {
+  transition: transform 0.15s ease-in-out;
+}
+.pp-smart-header .chev.collapsed {
+  transform: rotate(-90deg);
+}
+
+.pp-moment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  border-radius: 6px;
+  position: relative;
+}
+.pp-moment-card::after,
+.pp-spoken-row::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.pp-moment-card[data-selected]::after {
+  box-shadow: inset 0 0 0 1.5px var(--pp-accent);
+}
+.pp-moment-thumb {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  flex: none;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pp-moment-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pp-moment-name {
+  font-size: var(--pp-fs-xs);
+  color: var(--pp-text-secondary);
+}
+.pp-moment-range {
+  font-size: var(--pp-fs-xxs);
+  color: var(--pp-text-tertiary);
+}
+
+.pp-spoken-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 6px;
+}
+.pp-spoken-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0 10px;
+}
+.pp-spoken-row[data-selected] .pp-moment-thumb {
+  box-shadow: inset 0 0 0 1.5px var(--pp-accent);
+}
+.pp-spoken-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+.pp-spoken-text .text {
+  font-size: var(--pp-fs-xs);
+  color: var(--pp-text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pp-spoken-text .meta {
+  font-size: var(--pp-fs-xxs);
+  color: var(--pp-text-tertiary);
+}
+
+/* Settings ▸ Storage */
+.pp-storage-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 2px;
+  font-size: var(--pp-fs-xs);
+}
+.pp-storage-row .k {
+  color: var(--pp-text-tertiary);
+}
+.pp-storage-row .v {
+  color: var(--pp-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.pp-storage-row .spacer {
+  flex: 1;
+  min-width: 10px;
+}
+.pp-storage-path {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 2px;
+  font-size: var(--pp-fs-xs);
+  min-width: 0;
+}
+.pp-storage-path .path {
+  color: var(--pp-text-tertiary);
+  user-select: text;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left;
+  min-width: 0;
+}
+.pp-storage-path .size {
+  color: var(--pp-text-secondary);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.pp-storage-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+}
+.pp-storage-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pp-storage-head .pp-set-toggle-text {
+  flex: 1;
+  min-width: 0;
+}
