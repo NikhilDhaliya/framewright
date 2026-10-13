@@ -14,7 +14,7 @@ describe('rebrand to Framewright', () => {
       APP_NAME: 'Framewright',
       APP_SLUG: 'framewright',
       APP_ID: 'io.github.nikhildhaliya.framewright',
-      REPO_URL: 'https://github.com/NikhilDhaliya/aieditor',
+      REPO_URL: 'https://github.com/NikhilDhaliya/framewright',
     })
     expect(ATTRIBUTION).toBe('Based on Palmier Pro (GPLv3) by Palmier, Inc.')
     expect(appDirs.config).toBe(xdg('xdg_config_home', 'framewright'))

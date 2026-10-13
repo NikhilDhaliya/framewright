@@ -4,13 +4,13 @@
   "version": "0.1.0",
   "description": "Framewright: an AI-native video editor for Linux with an MCP server for AI agents. Based on Palmier Pro (GPLv3) by Palmier, Inc.",
   "author": "Nikhil Dhaliya",
-  "homepage": "https://github.com/NikhilDhaliya/aieditor",
+  "homepage": "https://github.com/NikhilDhaliya/framewright",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NikhilDhaliya/aieditor.git"
+    "url": "https://github.com/NikhilDhaliya/framewright.git"
   },
   "bugs": {
-    "url": "https://github.com/NikhilDhaliya/aieditor/issues"
+    "url": "https://github.com/NikhilDhaliya/framewright/issues"
   },
   "desktopName": "framewright.desktop",
   "license": "GPL-3.0-only",

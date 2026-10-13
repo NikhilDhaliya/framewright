@@ -17,7 +17,7 @@ export const APP_ID = 'io.github.nikhildhaliya.framewright'
 /** Pre-rebrand XDG directory name; migrated once on startup (src/main/paths.ts). */
 export const LEGACY_SLUG = 'palmier-pro'
 
-export const REPO_URL = 'https://github.com/NikhilDhaliya/aieditor'
+export const REPO_URL = 'https://github.com/NikhilDhaliya/framewright'
 
 /** Help ▸ Send Feedback opens a prefilled issue here (spec 07 §7.4 `feedbackIssueURL`). */
 export const FEEDBACK_ISSUE_URL = `${REPO_URL}/issues/new`
