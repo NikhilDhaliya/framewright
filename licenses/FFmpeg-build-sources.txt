@@ -1,0 +1,373 @@
+Sources of the libraries statically linked into the bundled FFmpeg
+====================================================================================================
+
+Framewright bundles the FFmpeg 7.0.2 static build by John Van Sickle (ffmpeg-7.0.2-amd64-static,
+https://johnvansickle.com/ffmpeg/) as the ffmpeg and ffprobe executables, obtained through
+ffmpeg-static (release b6.1.1). The build is licensed under the GNU GPL version 3. FFmpeg's own
+source, ffmpeg-7.0.2.tar.xz, is attached to each Framewright release.
+
+Both executables are statically linked: the libraries below are compiled into them. As GPLv3
+section 6(d) allows, their source code is kept on the third-party servers linked below.
+FFmpeg-build-README.txt in this folder is the build's own README.
+
+How the versions were determined
+- Entries without a note: the version is the one in FFmpeg-build-README.txt or embedded in the
+  binary, and the link is to that exact release, git commit or Debian source package.
+- "Inferred": the README does not list the library, or lists it inaccurately. The build was made on
+  Debian 10 "buster" with gcc 8.3.0-6, so these libraries come from Debian 10 packages unless
+  strings in the binary show a different version. For Debian revisions, the build machine is assumed to have
+  the package updates that matched freetype 2.9.1-3+deb10u1 (listed in the README), which means
+  Debian 10 updates up to about October 2020.
+- "Approximate": the exact source could not be identified, so the entry links the closest source
+  that can be justified.
+
+Debian source packages are linked as .dsc files on snapshot.debian.org. A .dsc file names the
+upstream tarball and the Debian changes, which are in the same directory. "dget -x <url>" (from
+devscripts) downloads and unpacks all of them.
+
+
+----------------------------------------------------------------------------------------------------
+Libraries listed in the build README
+----------------------------------------------------------------------------------------------------
+
+libaom
+  Version: 3.2.0-393-g402e264b94 (git commit 402e264b94fd74bdf66837da216b6251805b4ae4)
+  License: BSD-2-Clause
+  Source:  https://aomedia.googlesource.com/aom/+archive/402e264b94fd74bdf66837da216b6251805b4ae4.tar.gz
+
+libass
+  Version: 0.17.3-12-g5c00ca2 (git commit 5c00ca266dd49dd7cf93a79f09a661ab1ff66439, as embedded in
+           the binary; the README shortens it to 0.17.3)
+  License: ISC
+  Source:  https://github.com/libass/libass/archive/5c00ca266dd49dd7cf93a79f09a661ab1ff66439.tar.gz
+
+libgme (Game_Music_Emu)
+  Version: 0.6.3 (git tag 0.6.3, commit e76bdc0cb916e79aa540290e6edd0c445879d3ba)
+  License: LGPL-2.1-or-later
+  Source:  https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.3.tar.gz
+
+libsrt (SRT)
+  Version: 1.4.4
+  License: MPL-2.0
+  Source:  https://github.com/Haivision/srt/archive/refs/tags/v1.4.4.tar.gz
+
+libvpx
+  Version: 1.11.0-30-g888bafc78 (git commit 888bafc78d8bddb5cfc4262c93f456c812763571)
+  License: BSD-3-Clause
+  Source:  https://chromium.googlesource.com/webm/libvpx/+archive/888bafc78d8bddb5cfc4262c93f456c812763571.tar.gz
+
+libvmaf (VMAF)
+  Version: 2.3.0
+  License: BSD-2-Clause-Patent
+  Source:  https://github.com/Netflix/vmaf/archive/refs/tags/v2.3.0.tar.gz
+
+libx264 (x264)
+  Version: 0.164.3191 (core 164; revision 3191 is git commit
+           4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1)
+  License: GPL-2.0-or-later
+  Source:  https://code.videolan.org/videolan/x264/-/archive/4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1/x264-4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1.tar.bz2
+
+libx265 (x265)
+  Version: 3.5+1-f0c1022b6 (git commit f0c1022b6be121a753ff02853fbe33da71988656)
+  License: GPL-2.0-or-later
+  Source:  https://bitbucket.org/multicoreware/x265_git/get/f0c1022b6be121a753ff02853fbe33da71988656.tar.gz
+
+libxvid (Xvid)
+  Version: 1.3.7
+  License: GPL-2.0-or-later
+  Source:  https://downloads.xvid.com/downloads/xvidcore-1.3.7.tar.gz
+
+libwebp
+  Version: 0.6.1
+  License: BSD-3-Clause
+  Source:  https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.6.1.tar.gz
+
+libzimg (zimg)
+  Version: 3.0.3
+  License: WTFPL
+  Source:  https://github.com/sekrit-twc/zimg/archive/refs/tags/release-3.0.3.tar.gz
+
+libzvbi (ZVBI)
+  Version: 0.2.36
+  License: LGPL-2.0-or-later
+  Source:  https://github.com/zapping-vbi/zvbi/archive/refs/tags/v0.2.36.tar.gz
+
+libdav1d (dav1d)
+  Version: 1.4.2-23-ge560d2b (git commit e560d2ba08776572b918c7f936919a1f407f4e92, as embedded in
+           the binary; the README shortens it to 1.4.2)
+  License: BSD-2-Clause
+  Source:  https://code.videolan.org/videolan/dav1d/-/archive/e560d2ba08776572b918c7f936919a1f407f4e92/dav1d-e560d2ba08776572b918c7f936919a1f407f4e92.tar.bz2
+
+libgnutls (GnuTLS)
+  Version: 3.7.2
+  License: LGPL-2.1-or-later
+  Source:  https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz
+
+libtheora
+  Version: 1.2.0alpha1+git (the binary reports
+           "Xiph.Org libtheora 1.2.0alpha 20100924 (Ptalarbvorm)")
+  License: BSD-3-Clause
+  Source:  https://gitlab.xiph.org/xiph/theora/-/archive/7180717276af1ebc7da15c83162d6c5d6203aabf/theora-7180717276af1ebc7da15c83162d6c5d6203aabf.tar.gz
+  Note:    Approximate. The build used an unidentified git snapshot of the theora master branch
+           taken after the 1.2.0alpha1 release. Every snapshot from 2010-09-24 until 2025 reports
+           the same version string. The link is the master branch as of 2024 (commit 7180717276af,
+           2020-10-27). The library code (lib/ and include/) did not change from 2020-10-22 until
+           2025, so this link matches any snapshot taken in that period. A snapshot from before
+           2020-10-22 would lack a few small fixes.
+
+frei0r (only the frei0r.h API header is used; frei0r plugins are loaded at run time and none are
+        bundled)
+  Version: 1.6.1-2 (Debian 10 source package frei0r)
+  License: GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20180115T220627Z/pool/main/f/frei0r/frei0r_1.6.1-2.dsc
+
+libvidstab (vid.stab)
+  Version: 1.20
+  License: GPL-2.0-or-later
+  Source:  https://github.com/georgmartius/vid.stab/archive/refs/tags/v1.1.1.tar.gz
+  Note:    Approximate. vid.stab reports the version "1.20" for every snapshot of its master branch
+           from 2020-11-05 onward, including the v1.1.1 and v1.1.2 tags, so the exact snapshot
+           cannot be identified. The link is v1.1.1 (2022-05-30), the only release in that range
+           made before this FFmpeg build (2024).
+
+libfreetype (FreeType)
+  Version: 2.9.1-3+deb10u1 (Debian 10 source package freetype)
+  License: FTL OR GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20190917T155900Z/pool/main/f/freetype/freetype_2.9.1-3%2Bdeb10u1.dsc
+
+libharfbuzz (HarfBuzz)
+  Version: 3.1.1
+  License: MIT-Modern-Variant
+  Source:  https://github.com/harfbuzz/harfbuzz/releases/download/3.1.1/harfbuzz-3.1.1.tar.xz
+
+libopenjpeg (OpenJPEG)
+  Version: 2.4.0
+  License: BSD-2-Clause
+  Source:  https://github.com/uclouvain/openjpeg/archive/refs/tags/v2.4.0.tar.gz
+
+libalsa (alsa-lib)
+  Version: 1.2.4
+  License: LGPL-2.1-or-later
+  Source:  https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.4.tar.bz2
+
+libsoxr (SoX Resampler)
+  Version: 0.1.3
+  License: LGPL-2.1-or-later
+  Source:  https://downloads.sourceforge.net/project/soxr/soxr-0.1.3-Source.tar.xz
+
+libopus (Opus)
+  Version: 1.3.1
+  License: BSD-3-Clause
+  Source:  https://downloads.xiph.org/releases/opus/opus-1.3.1.tar.gz
+
+libspeex (Speex)
+  Version: 1.2~rc1.2-1 (Debian 10 source package speex; the binary reports 1.2rc1)
+  License: BSD-3-Clause
+  Source:  https://snapshot.debian.org/archive/debian/20140826T160844Z/pool/main/s/speex/speex_1.2~rc1.2-1.dsc
+  Note:    Inferred. The README lists "1.2", but the version string compiled into the binary is
+           "1.2rc1". Upstream Speex 1.2.0 would report "1.2.0". The speex package in Debian 10
+           (1.2~rc1.2-1) reports 1.2rc1 and is the most likely origin.
+
+libvorbis (Vorbis)
+  Version: 1.3.7
+  License: BSD-3-Clause
+  Source:  https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz
+
+libmp3lame (LAME)
+  Version: 3.100
+  License: LGPL-2.0-or-later
+  Source:  https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz
+
+librubberband (Rubber Band)
+  Version: 1.8.2
+  License: GPL-2.0-or-later
+  Source:  https://breakfastquay.com/files/releases/rubberband-1.8.2.tar.bz2
+
+libvo-amrwbenc (VisualOn AMR-WB encoder)
+  Version: 0.1.3-1+b1 (Debian 10 binary package; source package vo-amrwbenc 0.1.3-1)
+  License: Apache-2.0
+  Source:  https://snapshot.debian.org/archive/debian/20130827T154759Z/pool/main/v/vo-amrwbenc/vo-amrwbenc_0.1.3-1.dsc
+
+libopencore-amrnb and libopencore-amrwb (OpenCORE AMR)
+  Version: 0.1.3-2.1+b2 (Debian 10 binary packages; source package opencore-amr 0.1.3-2.1)
+  License: Apache-2.0
+  Source:  https://snapshot.debian.org/archive/debian/20140902T035929Z/pool/main/o/opencore-amr/opencore-amr_0.1.3-2.1.dsc
+
+
+----------------------------------------------------------------------------------------------------
+Libraries not listed in the build README
+----------------------------------------------------------------------------------------------------
+
+These libraries come from the configure line (fontconfig, fribidi, gmp, libxml2) or are static
+dependencies of the libraries above.
+
+libfribidi (GNU FriBidi)
+  Version: 1.0.11
+  License: LGPL-2.1-or-later
+  Source:  https://github.com/fribidi/fribidi/releases/download/v1.0.11/fribidi-1.0.11.tar.xz
+  Note:    Inferred. The binary contains "Shaper: FriBidi 1.0.11". Debian 10 ships 1.0.5, so this
+           was built from the upstream release.
+
+libxml2
+  Version: 2.9.8
+  License: MIT
+  Source:  https://download.gnome.org/sources/libxml2/2.9/libxml2-2.9.8.tar.xz
+  Note:    Inferred. The binary contains libxml2's version code 20908, which means 2.9.8. Debian 10
+           ships 2.9.4, so this was built from the upstream release.
+
+Nettle (libnettle and libhogweed, used by GnuTLS)
+  Version: 3.7.3
+  License: LGPL-3.0-or-later OR GPL-2.0-or-later
+  Source:  https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz
+  Note:    Inferred. Nettle embeds no version string. GnuTLS 3.7.2 requires Nettle 3.6 or later,
+           and Debian 10 ships 3.4.1, so Nettle was built from source. The assertion messages in
+           the binary match Nettle 3.7.3. They do not match 3.6, 3.7 to 3.7.2, or 3.8.
+
+GMP (GNU Multiple Precision Arithmetic Library)
+  Version: 2:6.1.2+dfsg-4 (Debian 10 source package gmp)
+  License: LGPL-3.0-or-later OR GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20181202T092244Z/pool/main/g/gmp/gmp_6.1.2%2Bdfsg-4.dsc
+  Note:    Inferred: Debian 10 package. The binary has no GMP version string.
+
+libtasn1
+  Version: 4.13-3 (Debian 10 source package libtasn1-6)
+  License: LGPL-2.1-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20180517T101225Z/pool/main/libt/libtasn1-6/libtasn1-6_4.13-3.dsc
+  Note:    Inferred: Debian 10 package. The binary contains libtasn1's version, 4.13.
+
+libidn2
+  Version: 2.0.5-1+deb10u1 (Debian 10 source package libidn2)
+  License: LGPL-3.0-or-later OR GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20200202T145957Z/pool/main/libi/libidn2/libidn2_2.0.5-1%2Bdeb10u1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string. This update reached
+           Debian 10 in February 2020. If the build machine was last updated before then, the
+           source is 2.0.5-1:
+           https://snapshot.debian.org/archive/debian/20180831T150908Z/pool/main/libi/libidn2/libidn2_2.0.5-1.dsc
+
+libunistring (used by libidn2)
+  Version: 0.9.10-1 (Debian 10 source package libunistring)
+  License: LGPL-3.0-or-later OR GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20180709T040318Z/pool/main/libu/libunistring/libunistring_0.9.10-1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+Fontconfig
+  Version: 2.13.1-2 (Debian 10 source package fontconfig)
+  License: HPND
+  Source:  https://snapshot.debian.org/archive/debian/20181106T035542Z/pool/main/f/fontconfig/fontconfig_2.13.1-2.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+Expat (used by Fontconfig)
+  Version: 2.2.6-2+deb10u1 (Debian 10 source package expat)
+  License: MIT
+  Source:  https://snapshot.debian.org/archive/debian/20190923T023914Z/pool/main/e/expat/expat_2.2.6-2%2Bdeb10u1.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "expat_2.2.6".
+
+libpng (used by FreeType)
+  Version: 1.6.36-6 (Debian 10 source package libpng1.6)
+  License: libpng-2.0
+  Source:  https://snapshot.debian.org/archive/debian/20190408T153501Z/pool/main/libp/libpng1.6/libpng1.6_1.6.36-6.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "libpng version 1.6.36".
+
+zlib
+  Version: 1:1.2.11.dfsg-1 (Debian 10 source package zlib)
+  License: Zlib
+  Source:  https://snapshot.debian.org/archive/debian/20180427T215624Z/pool/main/z/zlib/zlib_1.2.11.dfsg-1.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "inflate 1.2.11".
+
+bzip2 (libbz2)
+  Version: 1.0.6-9.2~deb10u1 (Debian 10 source package bzip2)
+  License: bzip2-1.0.6
+  Source:  https://snapshot.debian.org/archive/debian/20190720T224415Z/pool/main/b/bzip2/bzip2_1.0.6-9.2~deb10u1.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "1.0.6, 6-Sept-2010".
+
+liblzma (XZ Utils)
+  Version: 5.2.4-1 (Debian 10 source package xz-utils)
+  License: LicenseRef-public-domain
+  Source:  https://snapshot.debian.org/archive/debian/20190128T030507Z/pool/main/x/xz-utils/xz-utils_5.2.4-1.dsc
+  Note:    Inferred: Debian 10 package. The binary contains liblzma's version, 5.2.4.
+
+libuuid (util-linux, used by Fontconfig)
+  Version: 2.33.1-0.1 (Debian 10 source package util-linux)
+  License: BSD-3-Clause
+  Source:  https://snapshot.debian.org/archive/debian/20190110T161153Z/pool/main/u/util-linux/util-linux_2.33.1-0.1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+FFTW (used by Rubber Band)
+  Version: 3.3.8-2 (Debian 10 source package fftw3)
+  License: GPL-2.0-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20180911T034625Z/pool/main/f/fftw3/fftw3_3.3.8-2.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "fftw-3.3.8".
+
+libsamplerate (used by Rubber Band)
+  Version: 0.1.9-2 (Debian 10 source package libsamplerate)
+  License: BSD-2-Clause
+  Source:  https://snapshot.debian.org/archive/debian/20180305T164802Z/pool/main/libs/libsamplerate/libsamplerate_0.1.9-2.dsc
+  Note:    Inferred: Debian 10 package. The binary contains "libsamplerate-0.1.9".
+
+libogg (used by Vorbis and Theora)
+  Version: 1.3.2-1 (Debian 10 source package libogg)
+  License: BSD-3-Clause
+  Source:  https://snapshot.debian.org/archive/debian/20140528T223909Z/pool/main/libo/libogg/libogg_1.3.2-1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string. Vorbis and Theora were
+           built from source, so libogg may have been too, in which case its version is unknown.
+
+libxcb (with libxcb-shm, libxcb-shape and libxcb-xfixes)
+  Version: 1.13.1-2 (Debian 10 source package libxcb)
+  License: X11
+  Source:  https://snapshot.debian.org/archive/debian/20181214T150526Z/pool/main/libx/libxcb/libxcb_1.13.1-2.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+libXau
+  Version: 1:1.0.8-1 (Debian 10 source package libxau)
+  License: MIT-open-group
+  Source:  https://snapshot.debian.org/archive/debian/20130615T043211Z/pool/main/libx/libxau/libxau_1.0.8-1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+libXdmcp
+  Version: 1:1.1.2-3 (Debian 10 source package libxdmcp)
+  License: MIT-open-group
+  Source:  https://snapshot.debian.org/archive/debian/20170302T211717Z/pool/main/libx/libxdmcp/libxdmcp_1.1.2-3.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+libX11
+  Version: 2:1.6.7-1+deb10u1 (Debian 10 source package libx11)
+  License: MIT AND X11
+  Source:  https://snapshot.debian.org/archive/debian/20200920T030154Z/pool/main/libx/libx11/libx11_1.6.7-1%2Bdeb10u1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string. This update reached
+           Debian 10 in September 2020. If the build machine was last updated before then, the
+           source is 2:1.6.7-1:
+           https://snapshot.debian.org/archive/debian/20181009T220159Z/pool/main/libx/libx11/libx11_1.6.7-1.dsc
+
+libXext
+  Version: 2:1.3.3-1 (Debian 10 source package libxext)
+  License: MIT-open-group AND X11 AND HPND AND HPND-sell-variant AND SMLNJ AND MIT AND ISC
+  Source:  https://snapshot.debian.org/archive/debian/20141005T221953Z/pool/main/libx/libxext/libxext_1.3.3-1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+libXv
+  Version: 2:1.0.11-1 (Debian 10 source package libxv)
+  License: SMLNJ AND HPND-sell-variant
+  Source:  https://snapshot.debian.org/archive/debian/20161205T212728Z/pool/main/libx/libxv/libxv_1.0.11-1.dsc
+  Note:    Inferred: Debian 10 package. The binary has no version string.
+
+GNU C Library (glibc)
+  Version: 2.28-10 (Debian 10 source package glibc)
+  License: LGPL-2.1-or-later
+  Source:  https://snapshot.debian.org/archive/debian/20190501T215844Z/pool/main/g/glibc/glibc_2.28-10.dsc
+  Note:    Inferred: Debian 10 package. The binary contains glibc's version, 2.28. Debian 10 did not
+           replace 2.28-10 until 2022.
+
+GCC runtime libraries (libstdc++ and libgcc)
+  Version: 8.3.0-6 (Debian 10 source package gcc-8; the binary records
+           "GCC: (Debian 8.3.0-6) 8.3.0")
+  License: GPL-3.0-or-later WITH GCC-exception-3.1
+  Source:  https://snapshot.debian.org/archive/debian/20190406T212022Z/pool/main/g/gcc-8/gcc-8_8.3.0-6.dsc
+
+
+----------------------------------------------------------------------------------------------------
+Written offer
+----------------------------------------------------------------------------------------------------
+
+If any link in this file stops working, you can request the source for that component at no charge
+by opening an issue at https://github.com/NikhilDhaliya/framewright/issues. Name the component and
+version in the issue. This offer stands for as long as Framewright distributes this FFmpeg build.

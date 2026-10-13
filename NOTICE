@@ -31,4 +31,6 @@ scripts/third-party-licenses.mjs) has the license texts.
 
 FFmpeg: the app bundles the FFmpeg 7.0.2 static build by John Van Sickle (ffmpeg and ffprobe, via
 ffmpeg-static b6.1.1), licensed under GPLv3. Its corresponding source, ffmpeg-7.0.2.tar.xz, is attached
-to every Framewright release and is also at https://ffmpeg.org/releases/ffmpeg-7.0.2.tar.xz.
+to every Framewright release and is also at https://ffmpeg.org/releases/ffmpeg-7.0.2.tar.xz. The
+sources of the libraries linked into the build are listed in licenses/FFmpeg-build-sources.txt
+(also included in THIRD_PARTY_LICENSES.txt).

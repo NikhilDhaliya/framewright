@@ -21,7 +21,7 @@ Framewright is based on [Palmier Pro](https://github.com/palmier-io/palmier-pro)
 
 ## Install
 
-Download the AppImage or the `.deb` from the releases page.
+Download the AppImage or the `.deb` from the [releases page](https://github.com/NikhilDhaliya/framewright/releases).
 
 ```bash
 # AppImage
@@ -101,7 +101,7 @@ This builds the app and writes to `dist/`:
 - `Framewright-<version>-x86_64.AppImage`
 - `Framewright-<version>-amd64.deb`
 - `framewright-<version>.mcpb` (the Claude Desktop extension, from `resources/mcpb/`; `npm run mcpb` builds only this)
-- `ffmpeg-7.0.2.tar.xz`, the source of the bundled FFmpeg build. Attach it to every release next to the AppImage and `.deb` (FFmpeg is GPLv3, so its source has to be available from the same place).
+- `ffmpeg-7.0.2.tar.xz`, the source of the bundled FFmpeg build. Attach it to every release next to the AppImage and `.deb` (FFmpeg is GPLv3, so its source has to be available from the same place). The sources of the libraries linked into that build are listed in [`licenses/FFmpeg-build-sources.txt`](licenses/FFmpeg-build-sources.txt); link it from the release notes.
 
 `npm run dist` also regenerates `THIRD_PARTY_LICENSES.txt` (`npm run licenses` does only this). Run it after changing dependencies and commit the result.
 
