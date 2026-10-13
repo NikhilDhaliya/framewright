@@ -8,14 +8,33 @@ import { isMenuOpen } from '../ui/Menu'
 import { addMarker, markRange, selectForward, trimToPlayhead } from '../timeline/actions'
 import { cycleTimelineTab } from '../timeline/tabs'
 import { mediaBridge } from './bridges'
-import { deleteKey, escape, isTyping, toggleMaximize } from './commands'
+import type { MenuCommand } from '../../shared/api'
+import { deleteKey, escape, isTyping, runMenuCommand, toggleMaximize } from './commands'
 
-/** Single-key editor shortcuts (§10.3). Ctrl accelerators belong to the app menu and arrive as commands. */
+/**
+ * Ctrl+C/X/V/A outside text fields. Chromium on Linux runs these as page edit commands (DOM copy/cut/paste,
+ * select all) before the app menu sees them, so their menu accelerators never fire; run the menu command here.
+ */
+const EDIT_KEYS: Record<string, MenuCommand> = { c: 'copy', x: 'cut', v: 'paste', a: 'select-all' }
+
+function editCommand(e: KeyboardEvent): MenuCommand | undefined {
+  if (!(e.ctrlKey || e.metaKey) || e.shiftKey || e.altKey) return undefined
+  const letter = /^[a-z]$/i.test(e.key) ? e.key.toLowerCase() : e.code.startsWith('Key') ? e.code.slice(3).toLowerCase() : ''
+  return EDIT_KEYS[letter]
+}
+
+/** Single-key editor shortcuts (§10.3). Other Ctrl accelerators belong to the app menu and arrive as commands. */
 function onKeyDown(e: KeyboardEvent): void {
   if (e.defaultPrevented || isTyping() || isMenuOpen() || useDialogs.getState().dialog || document.querySelector('.pp-popover')) return
   const s = editor()
   if (s.focusedPanel === 'mediaPanel' && mediaBridge.current?.handleKey(e)) {
     e.preventDefault()
+    return
+  }
+  const edit = editCommand(e)
+  if (edit) {
+    e.preventDefault()
+    void runMenuCommand(edit)
     return
   }
   if (e.ctrlKey || e.metaKey) return

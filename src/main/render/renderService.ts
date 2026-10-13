@@ -41,10 +41,13 @@ export interface HostRenderService extends RenderService {
 /**
  * Chromium switches the preview needs; call before `app.whenReady()`. Software-decoded video frames stay in
  * CPU memory so the preview's VideoFrame.copyTo is a plain copy instead of a GPU readback that blocks the
- * renderer behind the compositor (measured 128 ms → <1 ms per 1080p frame under SwiftShader).
+ * renderer behind the compositor (measured 128 ms → <1 ms per 1080p frame under SwiftShader). Hardware
+ * (VA-API) decoding is off for the same reason: its frames always live on the GPU, and on a real AMD GPU
+ * 1080p30 playback fell to ~2 fps with it versus a steady 30 fps decoding in software.
  */
 export function configureRenderSwitches(): void {
   app.commandLine.appendSwitch('disable-gpu-memory-buffer-video-frames')
+  app.commandLine.appendSwitch('disable-accelerated-video-decode')
 }
 
 export function createRenderService(): HostRenderService {

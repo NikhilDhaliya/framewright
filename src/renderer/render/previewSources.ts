@@ -17,6 +17,22 @@ const PLAY_DRIFT = 0.2
 /** Above this preview rate video elements seek frame-to-frame instead of decoding every frame. */
 const MAX_PLAYING_RATE = 2
 
+let videoHost: HTMLDivElement | null = null
+/**
+ * Keeps a pooled element in the page, 1 px and nearly transparent: Chromium renders detached (never composited)
+ * videos at its background rate of a few frames per second, so playback showed ~5 new frames/s instead of 30.
+ */
+function attachVideo(el: HTMLVideoElement): void {
+  if (!videoHost) {
+    videoHost = document.createElement('div')
+    videoHost.setAttribute('aria-hidden', 'true')
+    videoHost.style.cssText = 'position:fixed;left:0;bottom:0;width:1px;height:1px;overflow:hidden;opacity:0.01;pointer-events:none;z-index:2147483647'
+    document.body.appendChild(videoHost)
+  }
+  el.style.cssText = 'display:block;width:1px;height:1px'
+  videoHost.appendChild(el)
+}
+
 /** Asset id → playable media URL, resolved once and shared by picture and audio. */
 export class PlaybackUrls {
   private readonly resolved = new Map<string, string | null>()
@@ -153,6 +169,7 @@ export class PreviewSources implements FrameProvider {
       el.playsInline = true
       el.preload = 'auto'
       el.disableRemotePlayback = true
+      attachVideo(el)
       const slot: Slot = { el, url: '', clipId: null, shows: null, target: NaN, used: 0, presented: 0, planes: null, planesFor: -1, planesClip: null, copying: false, buffers: [], elementOnly: typeof VideoFrame === 'undefined' }
       const ready = () => {
         slot.shows = slot.clipId
@@ -325,6 +342,7 @@ export class PreviewSources implements FrameProvider {
       s.el.pause()
       s.el.removeAttribute('src')
       s.el.load()
+      s.el.remove()
     }
     this.slots.length = 0
     for (const i of this.images.values()) i.bitmap?.close()
